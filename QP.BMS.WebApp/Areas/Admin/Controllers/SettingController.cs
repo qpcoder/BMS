@@ -9,11 +9,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace QP.BMS.WebApp.Controllers
+namespace QP.BMS.WebApp.Areas.Admin.Controllers
 {
-    public class DownloadController : Controller
+    public class SettingController : Controller
     {
-        // GET: Download
+        // GET: Admin/Setting
         public ActionResult Index()
         {
             return View();
