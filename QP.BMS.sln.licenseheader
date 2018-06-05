@@ -1,0 +1,23 @@
+extensions: designer.cs generated.cs
+extensions: .cpp .h
+// Copyright (c) 2018 Nguyen Quy Blogger
+// Author: Nguyen Quy
+extensions: .cs
+/// <summary>
+/// <company> Nguyen Quy Blogger </company>
+/// <author> Nguyen Quy </author>
+/// <copyright> Copyright © 2018. All right reserver. </copyright
+/// </summary>
+extensions: .aspx .ascx
+<%-- 
+Copyright (c) 2018 Nguyen Quy Blogger
+Author: Nguyen Quy
+--%>
+extensions: .vb
+'Copyright (c) 2018 Nguyen Quy Blogger
+'Author: Nguyen Quy.
+extensions:  .xml .config .xsd .html .cshtml
+<!--
+Copyright (c) 2018 Nguyen Quy Blogger
+Author: Nguyen Quy
+-->

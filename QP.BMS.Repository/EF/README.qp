@@ -1,0 +1,8 @@
+﻿    
+    Enable-Migrations
+    
+    Add-Migration BMS -force
+    
+    Update-Database -force
+    
+    Get-Migrations
