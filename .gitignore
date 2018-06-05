@@ -1,0 +1,19 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/QP.BMS/v15
+/packages
+/QP.BMS.Data/bin/Debug
+/QP.BMS.Domain/bin/Debug
+/QP.BMS.Data/obj/Debug
+/QP.BMS.Models/bin/Debug
+/QP.BMS.Repository/bin/Debug
+/QP.BMS.Security/bin/Debug
+/QP.BMS.Services/bin/Debug
+/QP.BMS.UnitTests/bin/Debug
+/QP.BMS.WebApp/bin
+/QP.BMS.WinApp/bin/Debug
+/QPCODERS.Utilities/bin/Debug
+/QP.BMS.Domain/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/QP.BMS.WebApp/obj/Debug
