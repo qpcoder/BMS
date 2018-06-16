@@ -46,10 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependencyResolution\HelperRegistry.cs" />
+    <Compile Include="DependencyResolution\IoC.cs" />
+    <Compile Include="EmailHelperImp.cs" />
+    <Compile Include="Enum\Gender.cs" />
+    <Compile Include="Enum\SMSTypeEnum.cs" />
+    <Compile Include="Enum\TargetImplement.cs" />
+    <Compile Include="IEmailHelper.cs" />
+    <Compile Include="ILoggingHelper.cs" />
+    <Compile Include="ISpeedSMSHelper.cs" />
+    <Compile Include="IValidateHelper.cs" />
+    <Compile Include="LoggingHelperImp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpeedSmsImp.cs" />
+    <Compile Include="ValidateHelperImp.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
