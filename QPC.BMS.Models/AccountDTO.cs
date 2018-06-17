@@ -3,6 +3,7 @@
 /// <author> Nguyen Quy </author>
 /// <copyright> Copyright © 2018. All right reserver. </copyright
 /// </summary>
+using QPC.BMS.Helpers.Enum;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -61,7 +62,7 @@ namespace QPC.BMS.Models
         /// <summary>
         /// 
         /// </summary>
-        public int Gender { set; get; }
+        public Gender Gender { set; get; }
 
         /// <summary>
         /// 
@@ -189,11 +190,6 @@ namespace QPC.BMS.Models
         /// <summary>
         /// 
         /// </summary>
-        public Boolean IsActivitied { set; get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public int PostCount { set; get; }
 
         /// <summary>
@@ -204,7 +200,7 @@ namespace QPC.BMS.Models
         /// <summary>
         /// 
         /// </summary>
-        public Boolean Status { set; get; }
+        public AccountStatus? Status { set; get; }
 
 
         /// <summary>

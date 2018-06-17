@@ -86,9 +86,9 @@
     <Compile Include="IDownloadRepository.cs" />
     <Compile Include="IPostRepository.cs" />
     <Compile Include="ISystemRepository.cs" />
-    <Compile Include="Migrations\201806161554099_BMS.cs" />
-    <Compile Include="Migrations\201806161554099_BMS.Designer.cs">
-      <DependentUpon>201806161554099_BMS.cs</DependentUpon>
+    <Compile Include="Migrations\201806170809365_BMS.cs" />
+    <Compile Include="Migrations\201806170809365_BMS.Designer.cs">
+      <DependentUpon>201806170809365_BMS.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PostRepositoryImp.cs" />
@@ -115,8 +115,8 @@
     <Content Include="Migrations\script.view.v1.sql" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201806161554099_BMS.resx">
-      <DependentUpon>201806161554099_BMS.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806170809365_BMS.resx">
+      <DependentUpon>201806170809365_BMS.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

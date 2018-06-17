@@ -3,7 +3,6 @@
 /// <author> Nguyen Quy </author>
 /// <copyright> Copyright © 2018. All right reserver. </copyright
 /// </summary>
-
 namespace QPC.BMS.Repository
 {
     using System;
@@ -12,8 +11,10 @@ namespace QPC.BMS.Repository
     using QPC.BMS.Helpers;
     using QPC.BMS.Helpers.Enum;
     using QPC.BMS.Repository.EF;
-    using System.Data.SqlClient;
 
+    /// <summary>
+    /// Implementation interface IAccountRepository
+    /// </summary>
     public class AccountRepositoryImp : IAccountRepository
     {
         /// <summary>
@@ -29,7 +30,15 @@ namespace QPC.BMS.Repository
 
         public bool DeleteAccountByExpression(Func<Account, bool> expression)
         {
-            throw new NotImplementedException();
+            //log enter method
+            logger.EnterMethod();
+
+            //change status of account is deleted
+
+
+            //log release method
+            logger.ReleaseMethod();
+            return true;
         }
 
         public bool DeleteAccountByID(Guid accountID)

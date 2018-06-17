@@ -24,7 +24,7 @@ namespace QPC.BMS.Repository.Migrations
                         LastName = c.String(),
                         NickName = c.String(),
                         DisplayNamePublic = c.String(),
-                        Gender = c.String(),
+                        Gender = c.Int(nullable: false),
                         GraderID = c.Int(),
                         MSSV = c.String(),
                         Specialized = c.String(),
@@ -48,10 +48,9 @@ namespace QPC.BMS.Repository.Migrations
                         DateUpdated = c.DateTime(),
                         IsStudent = c.Boolean(),
                         RoleID = c.Int(),
-                        IsActivitied = c.Boolean(),
                         PostCount = c.Int(),
                         CommentCount = c.Int(),
-                        Status = c.Boolean(),
+                        Status = c.Int(),
                     })
                 .PrimaryKey(t => t.ID)
                 .ForeignKey("dbo.Graders", t => t.GraderID)
@@ -246,7 +245,7 @@ namespace QPC.BMS.Repository.Migrations
                         Permalink = c.String(),
                         Content = c.String(),
                         ImageID = c.Guid(),
-                        Status = c.Boolean(),
+                        Status = c.Int(),
                         AllowComments = c.Boolean(),
                         CommentCount = c.Int(nullable: false),
                         MetaTitle = c.String(),

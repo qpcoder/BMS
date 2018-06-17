@@ -49,7 +49,9 @@
     <Compile Include="DependencyResolution\HelperRegistry.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
     <Compile Include="EmailHelperImp.cs" />
+    <Compile Include="Enum\AccountStatus.cs" />
     <Compile Include="Enum\Gender.cs" />
+    <Compile Include="Enum\PostStatus.cs" />
     <Compile Include="Enum\SMSTypeEnum.cs" />
     <Compile Include="Enum\TargetImplement.cs" />
     <Compile Include="IEmailHelper.cs" />

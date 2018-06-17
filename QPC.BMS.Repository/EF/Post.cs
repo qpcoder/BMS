@@ -5,6 +5,7 @@
 /// </summary>
 namespace QPC.BMS.Repository.EF
 {
+    using QPC.BMS.Helpers.Enum;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
@@ -79,8 +80,7 @@ namespace QPC.BMS.Repository.EF
         /// <summary>
         /// 
         /// </summary>
-        [DefaultValue(false)]
-        public Boolean? Status { set; get; }
+        public PostStatus? Status { set; get; }
 
         /// <summary>
         /// 

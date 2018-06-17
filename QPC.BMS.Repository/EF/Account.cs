@@ -6,6 +6,7 @@
 
 namespace QPC.BMS.Repository.EF
 {
+    using QPC.BMS.Helpers.Enum;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
@@ -63,7 +64,7 @@ namespace QPC.BMS.Repository.EF
         /// <summary>
         /// 
         /// </summary>
-        public string Gender { set; get; }
+        public Gender Gender { set; get; }
 
         /// <summary>
         /// 
@@ -192,12 +193,6 @@ namespace QPC.BMS.Repository.EF
         /// <summary>
         /// 
         /// </summary>
-        [DefaultValue(false)]
-        public Boolean? IsActivitied { set; get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         [DefaultValue(0)]
         public int? PostCount { set; get; }
 
@@ -210,8 +205,7 @@ namespace QPC.BMS.Repository.EF
         /// <summary>
         /// 
         /// </summary>
-        [DefaultValue(false)]
-        public Boolean? Status { set; get; }
+        public AccountStatus? Status { set; get; }
 
 
         /// <summary>
