@@ -50,7 +50,9 @@
     <Compile Include="DependencyResolution\IoC.cs" />
     <Compile Include="DependencyResolution\ServicesRegistry.cs" />
     <Compile Include="IAccountServices.cs" />
+    <Compile Include="ISystemConfigurationServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemConfigurationServicesImp.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

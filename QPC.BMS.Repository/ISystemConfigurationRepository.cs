@@ -3,15 +3,24 @@
 /// <author> Nguyen Quy </author>
 /// <copyright> Copyright © 2018. All right reserver. </copyright
 /// </summary>
-
 namespace QPC.BMS.Repository
 {
     using QPC.BMS.Repository.EF;
     using System;
     using System.Collections.Generic;
 
-    public interface ISystemRepository
+    public interface ISystemConfigurationRepository
     {
+        #region Database Instance
+        bool CreateDatabase();
+
+        bool InsertDataCommon();
+
+        bool InsertDataDemo();
+
+        bool DeleteDataDemo();
+        #endregion
+
         #region Table Setting
 
         /// <summary>

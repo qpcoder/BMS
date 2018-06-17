@@ -3,21 +3,35 @@
 /// <author> Nguyen Quy </author>
 /// <copyright> Copyright © 2018. All right reserver. </copyright
 /// </summary>
-
 namespace QPC.BMS.Repository
 {
     using System;
     using System.Collections.Generic;
     using QPC.BMS.Repository.EF;
 
-    class SystemRepositoryImp : ISystemRepository
+    class SystemConfigurationRepositoryImp : ISystemConfigurationRepository
     {
+        public bool CreateDatabase()
+        {
+            // check exists database
+
+            // check version is new?
+
+            // create if not exist database or version is old
+            throw new NotImplementedException();
+        }
+
         public bool DeleteAllLogs()
         {
             throw new NotImplementedException();
         }
 
         public bool DeleteAllSettings()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool DeleteDataDemo()
         {
             throw new NotImplementedException();
         }
@@ -88,6 +102,16 @@ namespace QPC.BMS.Repository
         }
 
         public IEnumerable<Setting> GetSettingsByExpression(Func<Setting, bool> expression)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool InsertDataCommon()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool InsertDataDemo()
         {
             throw new NotImplementedException();
         }

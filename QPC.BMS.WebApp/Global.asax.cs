@@ -16,6 +16,8 @@ namespace QPC.BMS.WebApp
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
+            /// create database if model is changed
+
             ///Connfiguration Log4Net
             log4net.Config.XmlConfigurator.Configure();
         }

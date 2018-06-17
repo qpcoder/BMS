@@ -14,11 +14,16 @@ namespace QPC.BMS.Repository.DependencyResolution
         public RepositoryRegistry()
         {
             #region Constructors and Destructors
-            For<IAccountRepository>().Use<AccountRepositoryImp>().Name = TargetImplement.V1.ToString();
-            For<IPostRepository>().Use<PostRepositoryImp>().Name = TargetImplement.V1.ToString();
-            For<ICommentRepository>().Use<CommentRepositoryImp>().Name = TargetImplement.V1.ToString();
-            For<ISystemRepository>().Use<SystemRepositoryImp>().Name = TargetImplement.V1.ToString();
-            For<ICommonRepository>().Use<CommonRepositoryImp>().Name = TargetImplement.V1.ToString();
+            For<IAccountRepository>().Use<AccountRepositoryImp>().Name 
+                = TargetImplement.V1.ToString();
+            For<IPostRepository>().Use<PostRepositoryImp>().Name 
+                = TargetImplement.V1.ToString();
+            For<ICommentRepository>().Use<CommentRepositoryImp>().Name 
+                = TargetImplement.V1.ToString();
+            For<ISystemConfigurationRepository>().Use<SystemConfigurationRepositoryImp>().Name 
+                = TargetImplement.V1.ToString();
+            For<ICommonRepository>().Use<CommonRepositoryImp>().Name 
+                = TargetImplement.V1.ToString();
             #endregion
         }
     }

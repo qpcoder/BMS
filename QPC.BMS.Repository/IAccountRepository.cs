@@ -25,14 +25,14 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>list accounts</returns>
-        IEnumerable<Account> GetAccountsByExpression(Func<Account, bool> expression);
+        IEnumerable<Account> GetAccount(Func<Account, bool> expression);
 
         /// <summary>
         /// Get account by id
         /// </summary>
         /// <param name="roleID">account id</param>
         /// <returns>object account</returns>
-        Comment GetAccountByID(Guid accountID);
+        Account GetAccount(Guid accountID);
 
         /// <summary>
         /// Insert list account into database
@@ -53,34 +53,35 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean EditAccountByExpression(Func<Account, bool> expression);
+        Boolean EditAccount(Func<Account, bool> expression);
 
         /// <summary>
         /// Update account by object
         /// </summary>
         /// <param name="modelEdit">object edit</param>
         /// <returns>true or false</returns>
-        Boolean EditAccountByObject(Account modelEdit);
+        Boolean EditAccount(Account modelEdit);
 
         /// <summary>
         /// Delete account by ID
         /// </summary>
         /// <param name="accountID">account id</param>
         /// <returns>true or false</returns>
-        Boolean DeleteAccountByID(Guid accountID);
+        Boolean DeleteAccount(Guid accountID);
 
         /// <summary>
         /// Delete account by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean DeleteAccountByExpression(Func<Account, bool> expression);
+        Boolean DeleteAccount(Func<Account, bool> expression);
 
         /// <summary>
-        /// Delete all accounts
+        /// Delete account forever
         /// </summary>
-        /// <returns>true or false</returns>
-        Boolean DeleteAllAccounts();
+        /// <param name="expression"></param>
+        /// <returns></returns>
+        Boolean DeleteAccountForever(Func<Account, bool> expression);
 
         #endregion
 
@@ -97,14 +98,14 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>list roles</returns>
-        IEnumerable<Role> GetRolesByExpression(Func<Role, bool> expression);
+        IEnumerable<Role> GetRole(Func<Role, bool> expression);
 
         /// <summary>
         /// Get role by id
         /// </summary>
         /// <param name="roleID">role id</param>
         /// <returns>object role</returns>
-        Role GetRoleByID(Guid roleID);
+        Role GetRole(int roleID);
 
         /// <summary>
         /// Insert list role into database
@@ -125,34 +126,28 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean EditRoleByExpression(Func<Role, bool> expression);
+        Boolean EditRole(Func<Role, bool> expression);
 
         /// <summary>
         /// Update role by object
         /// </summary>
         /// <param name="modelEdit">object edit</param>
         /// <returns>true or false</returns>
-        Boolean EditRoleByObject(Role modelEdit);
+        Boolean EditRole(Role modelEdit);
 
         /// <summary>
         /// Delete role by ID
         /// </summary>
         /// <param name="roleID">role id</param>
         /// <returns>true or false</returns>
-        Boolean DeleteRoleByID(Guid roleID);
+        Boolean DeleteRole(Guid roleID);
 
         /// <summary>
         /// Delete role by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean DeleteRoleByExpression(Func<Role, bool> expression);
-
-        /// <summary>
-        /// Delete all roles
-        /// </summary>
-        /// <returns>true or false</returns>
-        Boolean DeleteAllRoles();
+        Boolean DeleteRole(Func<Role, bool> expression);
 
         #endregion
 
@@ -169,14 +164,14 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>list modules</returns>
-        IEnumerable<Module> GetModulesByExpression(Func<Module, bool> expression);
+        IEnumerable<Module> GetModule(Func<Module, bool> expression);
 
         /// <summary>
         /// Get module by id
         /// </summary>
         /// <param name="moduleID">module id</param>
         /// <returns>object module</returns>
-        Module GetModuleByID(Module moduleID);
+        Module GetModule(int moduleID);
 
         /// <summary>
         /// Insert list module into database
@@ -197,34 +192,28 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean EditModuleByExpression(Func<Module, bool> expression);
+        Boolean EditModule(Func<Module, bool> expression);
 
         /// <summary>
         /// Update module by object
         /// </summary>
         /// <param name="modelEdit">object edit</param>
         /// <returns>true or false</returns>
-        Boolean EditModuleByObject(Module modelEdit);
+        Boolean EditModule(Module modelEdit);
 
         /// <summary>
         /// Delete module by ID
         /// </summary>
         /// <param name="moduleID">module id</param>
         /// <returns>true or false</returns>
-        Boolean DeleteModuleByID(Guid moduleID);
+        Boolean DeleteModule(Guid moduleID);
 
         /// <summary>
         /// Delete module by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean DeleteModuleByExpression(Func<Module, bool> expression);
-
-        /// <summary>
-        /// Delete all modules
-        /// </summary>
-        /// <returns>true or false</returns>
-        Boolean DeleteAllModules();
+        Boolean DeleteModule(Func<Module, bool> expression);
 
         #endregion
 
@@ -241,14 +230,14 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>list authorizations</returns>
-        IEnumerable<Authorization> GetAuthorizationsByExpression(Func<Authorization, bool> expression);
+        IEnumerable<Authorization> GetAuthorization(Func<Authorization, bool> expression);
 
         /// <summary>
         /// Get authorization by id
         /// </summary>
         /// <param name="authorizationID">authorization id</param>
         /// <returns>object authorization</returns>
-        Authorization GetAuthorizationByID(Guid authorizationID);
+        Authorization GetAuthorization(Guid authorizationID);
 
         /// <summary>
         /// Insert list authorization into database
@@ -269,28 +258,28 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean EditAuthorizationByExpression(Func<Authorization, bool> expression);
+        Boolean EditAuthorization(Func<Authorization, bool> expression);
 
         /// <summary>
         /// Update authorization by object
         /// </summary>
         /// <param name="modelEdit">object edit</param>
         /// <returns>true or false</returns>
-        Boolean EditAuthorizationByObject(Authorization modelEdit);
+        Boolean EditAuthorization(Authorization modelEdit);
 
         /// <summary>
         /// Delete authorization by ID
         /// </summary>
         /// <param name="authorizationID">authorization id</param>
         /// <returns>true or false</returns>
-        Boolean DeleteAuthorizationByID(Guid authorizationID);
+        Boolean DeleteAuthorization(Guid authorizationID);
 
         /// <summary>
         /// Delete authorization by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean DeleteAuthorizationByExpression(Func<Authorization, bool> expression);
+        Boolean DeleteAuthorization(Func<Authorization, bool> expression);
 
         /// <summary>
         /// Delete all authorizations

@@ -9,6 +9,7 @@ namespace QPC.BMS.Helpers
     using System;
     using System.Runtime.CompilerServices;
     using System.Text;
+    using System.Threading;
     using log4net;
     using log4net.Core;
 
@@ -42,7 +43,11 @@ namespace QPC.BMS.Helpers
         public void Debug(object message, Exception exception)
         {
             if (IsDebugEnabled)
-                logger.Debug(message, exception);
+            {
+                stringBuilder = new StringBuilder(message.ToString());
+                stringBuilder.Append(exception.Message);
+                logger.Debug(stringBuilder);
+            }
         }
 
         public void DebugFormat(string format, params object[] args)
@@ -124,7 +129,11 @@ namespace QPC.BMS.Helpers
         public void Error(object message, Exception exception)
         {
             if (IsErrorEnabled)
-                logger.Error(message, exception);
+            {
+                stringBuilder = new StringBuilder(message.ToString());
+                stringBuilder.Append(exception.Message.ToString());
+                logger.Error(stringBuilder);
+            }
         }
 
         public void ErrorFormat(string format, params object[] args)
@@ -166,7 +175,11 @@ namespace QPC.BMS.Helpers
         public void Fatal(object message, Exception exception)
         {
             if (IsFatalEnabled)
-                logger.Fatal(message, exception);
+            {
+                stringBuilder = new StringBuilder(message.ToString());
+                stringBuilder.Append(exception.Message);
+                logger.Fatal(stringBuilder);
+            }
         }
 
         public void FatalFormat(string format, params object[] args)
@@ -208,7 +221,11 @@ namespace QPC.BMS.Helpers
         public void Info(object message, Exception exception)
         {
             if (IsInfoEnabled)
-                logger.Info(message, exception);
+            {
+                stringBuilder = new StringBuilder(message.ToString());
+                stringBuilder.Append(exception.Message);
+                logger.Info(stringBuilder);
+            }
         }
 
         public void InfoFormat(string format, params object[] args)
@@ -250,7 +267,11 @@ namespace QPC.BMS.Helpers
         public void Warn(object message, Exception exception)
         {
             if (IsWarnEnabled)
-                logger.Warn(message, exception);
+            {
+                stringBuilder = new StringBuilder(message.ToString());
+                stringBuilder.Append(exception.Message);
+                logger.Warn(stringBuilder); ;
+            }
         }
 
         public void WarnFormat(string format, params object[] args)

@@ -51,9 +51,11 @@
     <Compile Include="EmailHelperImp.cs" />
     <Compile Include="Enum\AccountStatus.cs" />
     <Compile Include="Enum\Gender.cs" />
+    <Compile Include="Enum\MessageContants.cs" />
     <Compile Include="Enum\PostStatus.cs" />
     <Compile Include="Enum\SMSTypeEnum.cs" />
     <Compile Include="Enum\TargetImplement.cs" />
+    <Compile Include="Enum\TitleContants.cs" />
     <Compile Include="IEmailHelper.cs" />
     <Compile Include="ILoggingHelper.cs" />
     <Compile Include="ISpeedSMSHelper.cs" />

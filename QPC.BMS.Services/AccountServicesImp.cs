@@ -31,7 +31,7 @@ namespace QPC.BMS.Services
 
         public bool Login(string userName, string passWord)
         {
-            accountRepository.GetAccountsByExpression(x => x.UserName == userName && x.Password == passWord);
+            accountRepository.GetAccount(x => x.UserName == userName && x.Password == passWord);
             return true;
         }
     }

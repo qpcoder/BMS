@@ -3,7 +3,6 @@
 /// <author> Nguyen Quy </author>
 /// <copyright> Copyright © 2018. All right reserver. </copyright
 /// </summary>
-
 namespace QPC.BMS.Services.DependencyResolution
 {
     using QPC.BMS.Helpers.Enum;
