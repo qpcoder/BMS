@@ -35,37 +35,44 @@ namespace QPC.BMS.Helpers
 
         public void Debug(object message)
         {
-            logger.Debug(message);
+            if (IsDebugEnabled)
+                logger.Debug(message);
         }
 
         public void Debug(object message, Exception exception)
         {
-            logger.Debug(message, exception);
+            if (IsDebugEnabled)
+                logger.Debug(message, exception);
         }
 
         public void DebugFormat(string format, params object[] args)
         {
-            logger.DebugFormat(format, args);
+            if (IsDebugEnabled)
+                logger.DebugFormat(format, args);
         }
 
         public void DebugFormat(string format, object arg0)
         {
-            throw new NotImplementedException();
+            if (IsDebugEnabled)
+                logger.DebugFormat(format, arg0);
         }
 
         public void DebugFormat(string format, object arg0, object arg1)
         {
-            throw new NotImplementedException();
+            if (IsDebugEnabled)
+                logger.DebugFormat(format, arg0, arg1);
         }
 
         public void DebugFormat(string format, object arg0, object arg1, object arg2)
         {
-            throw new NotImplementedException();
+            if (IsDebugEnabled)
+                logger.DebugFormat(format, arg0, arg1, arg2);
         }
 
         public void DebugFormat(IFormatProvider provider, string format, params object[] args)
         {
-            throw new NotImplementedException();
+            if (IsDebugEnabled)
+                logger.DebugFormat(provider, format, args);
         }
 
         /// <summary>
@@ -110,142 +117,170 @@ namespace QPC.BMS.Helpers
 
         public void Error(object message)
         {
-            throw new NotImplementedException();
+            if (IsErrorEnabled)
+                logger.Error(message);
         }
 
         public void Error(object message, Exception exception)
         {
-            throw new NotImplementedException();
+            if (IsErrorEnabled)
+                logger.Error(message, exception);
         }
 
         public void ErrorFormat(string format, params object[] args)
         {
-            throw new NotImplementedException();
+            if (IsErrorEnabled)
+                logger.ErrorFormat(format, args);
         }
 
         public void ErrorFormat(string format, object arg0)
         {
-            throw new NotImplementedException();
+            if (IsErrorEnabled)
+                logger.ErrorFormat(format, arg0);
         }
 
         public void ErrorFormat(string format, object arg0, object arg1)
         {
-            throw new NotImplementedException();
+            if (IsErrorEnabled)
+                logger.ErrorFormat(format, arg0, arg1);
         }
 
         public void ErrorFormat(string format, object arg0, object arg1, object arg2)
         {
-            throw new NotImplementedException();
+            if (IsErrorEnabled)
+                logger.ErrorFormat(format, arg0, arg1, arg2);
         }
 
         public void ErrorFormat(IFormatProvider provider, string format, params object[] args)
         {
-            throw new NotImplementedException();
+            if (IsErrorEnabled)
+                logger.ErrorFormat(provider, format, args);
         }
 
         public void Fatal(object message)
         {
-            throw new NotImplementedException();
+            if (IsFatalEnabled)
+                logger.Fatal(message);
         }
 
         public void Fatal(object message, Exception exception)
         {
-            throw new NotImplementedException();
+            if (IsFatalEnabled)
+                logger.Fatal(message, exception);
         }
 
         public void FatalFormat(string format, params object[] args)
         {
-            throw new NotImplementedException();
+            if (IsFatalEnabled)
+                logger.FatalFormat(format, args);
         }
 
         public void FatalFormat(string format, object arg0)
         {
-            throw new NotImplementedException();
+            if (IsFatalEnabled)
+                logger.FatalFormat(format, arg0);
         }
 
         public void FatalFormat(string format, object arg0, object arg1)
         {
-            throw new NotImplementedException();
+            if (IsFatalEnabled)
+                logger.FatalFormat(format, arg0, arg1);
         }
 
         public void FatalFormat(string format, object arg0, object arg1, object arg2)
         {
-            throw new NotImplementedException();
+            if (IsFatalEnabled)
+                logger.FatalFormat(format, arg0, arg1, arg2);
         }
 
         public void FatalFormat(IFormatProvider provider, string format, params object[] args)
         {
-            throw new NotImplementedException();
+            if (IsFatalEnabled)
+                logger.FatalFormat(provider, format, args);
         }
 
         public void Info(object message)
         {
-            throw new NotImplementedException();
+            if (IsInfoEnabled)
+                logger.Info(message);
         }
 
         public void Info(object message, Exception exception)
         {
-            throw new NotImplementedException();
+            if (IsInfoEnabled)
+                logger.Info(message, exception);
         }
 
         public void InfoFormat(string format, params object[] args)
         {
-            throw new NotImplementedException();
+            if (IsInfoEnabled)
+                logger.InfoFormat(format, args);
         }
 
         public void InfoFormat(string format, object arg0)
         {
-            throw new NotImplementedException();
+            if (IsInfoEnabled)
+                logger.InfoFormat(format, arg0);
         }
 
         public void InfoFormat(string format, object arg0, object arg1)
         {
-            throw new NotImplementedException();
+            if (IsInfoEnabled)
+                logger.InfoFormat(format, arg0, arg1);
         }
 
         public void InfoFormat(string format, object arg0, object arg1, object arg2)
         {
-            throw new NotImplementedException();
+            if (IsInfoEnabled)
+                logger.InfoFormat(format, arg0, arg1, arg2);
         }
 
         public void InfoFormat(IFormatProvider provider, string format, params object[] args)
         {
-            throw new NotImplementedException();
+            if (IsInfoEnabled)
+                logger.InfoFormat(provider, format, args);
         }
 
         public void Warn(object message)
         {
-            throw new NotImplementedException();
+            if (IsWarnEnabled)
+                logger.Warn(message);
         }
 
         public void Warn(object message, Exception exception)
         {
-            throw new NotImplementedException();
+            if (IsWarnEnabled)
+                logger.Warn(message, exception);
         }
 
         public void WarnFormat(string format, params object[] args)
         {
-            throw new NotImplementedException();
+            if (IsWarnEnabled)
+                logger.WarnFormat(format, args);
         }
 
         public void WarnFormat(string format, object arg0)
         {
-            throw new NotImplementedException();
+            if (IsWarnEnabled)
+                logger.WarnFormat(format, arg0);
         }
 
         public void WarnFormat(string format, object arg0, object arg1)
         {
-            throw new NotImplementedException();
+            if (IsWarnEnabled)
+                logger.WarnFormat(format, arg0, arg1);
         }
 
         public void WarnFormat(string format, object arg0, object arg1, object arg2)
         {
-            throw new NotImplementedException();
+            if (IsWarnEnabled)
+                logger.WarnFormat(format, arg0, arg1, arg2);
         }
 
         public void WarnFormat(IFormatProvider provider, string format, params object[] args)
         {
-            throw new NotImplementedException();
+            if (IsWarnEnabled)
+                logger.WarnFormat(provider, format, args);
         }
     }
 }

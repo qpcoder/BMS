@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountRepositoryImp.cs" />
+    <Compile Include="CommentRepositoryImp.cs" />
+    <Compile Include="CommonRepositoryImp.cs" />
+    <Compile Include="DependencyResolution\IoC.cs" />
+    <Compile Include="DependencyResolution\RepositoryRegistry.cs" />
+    <Compile Include="DownloadRepositoryImp.cs" />
     <Compile Include="EF\Account.cs" />
     <Compile Include="EF\Authorization.cs" />
     <Compile Include="EF\BMSContext.cs" />
@@ -74,12 +80,20 @@
     <Compile Include="EF\Setting.cs" />
     <Compile Include="EF\Tag.cs" />
     <Compile Include="EF\University.cs" />
+    <Compile Include="IAccountRepository.cs" />
+    <Compile Include="ICommentRepository.cs" />
+    <Compile Include="ICommonRepository.cs" />
+    <Compile Include="IDownloadRepository.cs" />
+    <Compile Include="IPostRepository.cs" />
+    <Compile Include="ISystemRepository.cs" />
     <Compile Include="Migrations\201806161554099_BMS.cs" />
     <Compile Include="Migrations\201806161554099_BMS.Designer.cs">
       <DependentUpon>201806161554099_BMS.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PostRepositoryImp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemRepositoryImp.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QPC.BMS.Helpers\QPC.BMS.Helpers.csproj">
@@ -106,4 +120,5 @@
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="H:\qp.dll\StyleCop\StyleCop.MSBuild.4.7.49.0\build\StyleCop.MSBuild.Targets" />
 </Project>

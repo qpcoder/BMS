@@ -3,23 +3,21 @@
 /// <author> Nguyen Quy </author>
 /// <copyright> Copyright © 2018. All right reserver. </copyright
 /// </summary>
-namespace QPC.BMS.Helpers.DependencyResolution
+
+namespace QPC.BMS.Repository.DependencyResolution
 {
     using StructureMap;
 
-    /// <summary>
-    /// Handle IoC in project for structure map
-    /// </summary>
     public class IoC
     {
         /// <summary>
-        /// Handle
+        /// Kho chua cac dang ky cua bo Utility
         /// </summary>
         /// <returns></returns>
         public static IContainer Container()
         {
             Registry registry = new Registry();
-            registry.IncludeRegistry<HelperRegistry>();
+            registry.IncludeRegistry<RepositoryRegistry>();
             Container container = new Container(registry);
             return container;
         }

@@ -3,14 +3,19 @@
 /// <author> Nguyen Quy </author>
 /// <copyright> Copyright © 2018. All right reserver. </copyright
 /// </summary>
-
 namespace QPC.BMS.Helpers.DependencyResolution
 {
     using QPC.BMS.Helpers.Enum;
     using StructureMap;
 
+    /// <summary>
+    /// Handle registry of helper project for structure map
+    /// </summary>
     public class HelperRegistry: Registry
     {
+        /// <summary>
+        /// Handle class helper registry
+        /// </summary>
         public HelperRegistry()
         {
             #region Constructors and Destructors

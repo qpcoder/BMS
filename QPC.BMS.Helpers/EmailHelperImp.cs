@@ -3,7 +3,6 @@
 /// <author> Nguyen Quy </author>
 /// <copyright> Copyright © 2018. All right reserver. </copyright
 /// </summary>
-
 namespace QPC.BMS.Helpers
 {
     using log4net;
@@ -12,13 +11,71 @@ namespace QPC.BMS.Helpers
     using System.Net.Mail;
     using System.Threading;
 
+    /// <summary>
+    /// Implement interface IEmailHelper
+    /// </summary>
     public class EmailHelperImp : IEmailHelper
     {
-        public string Password { get { return Password; } set { Password = value; } }
-        public string Host { get { return Host; } set { Host = value; } }
-        public int Port { get { return Port; } set { Port = value; } }
-        public bool EnableSsl { get { return EnableSsl; } set { EnableSsl = value; } }
-        public string FromEmail { get { return FromEmail; } set { FromEmail = value; } }
+        public string Password
+        {
+            get
+            {
+                return Password;
+            }
+            set
+            {
+                Password = value;
+            }
+
+        }
+
+        public string Host
+        {
+            get
+            {
+                return Host;
+            }
+            set
+            {
+                Host = value;
+            }
+        }
+
+        public int Port
+        {
+            get
+            {
+                return Port;
+            }
+            set
+            {
+                Port = value;
+            }
+        }
+
+        public bool EnableSsl
+        {
+            get
+            {
+                return EnableSsl;
+            }
+            set
+            {
+                EnableSsl = value;
+            }
+        }
+
+        public string FromEmail
+        {
+            get
+            {
+                return FromEmail;
+            }
+            set
+            {
+                FromEmail = value;
+            }
+        }
 
         /// <summary>
         /// Send a email 

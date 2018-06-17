@@ -4,18 +4,18 @@
 /// <copyright> Copyright © 2018. All right reserver. </copyright
 /// </summary>
 
-namespace QPC.BMS.WebApp.Controllers
+namespace QPC.BMS.Services
 {
     using QPC.BMS.Helpers;
     using QPC.BMS.Helpers.Enum;
-    using QPC.BMS.Services;
+    using QPC.BMS.Repository;
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Web;
-    using System.Web.Mvc;
+    using System.Text;
+    using System.Threading.Tasks;
 
-    public class HomeController : Controller
+    public class AccountServicesImp : IAccountServices
     {
         /// <summary>
         /// Handle instance for Log4Net
@@ -24,22 +24,15 @@ namespace QPC.BMS.WebApp.Controllers
             .GetInstance<ILoggingHelper>(TargetImplement.V1.ToString());
 
         /// <summary>
-        /// Handle instance for feature Account of BMS
+        /// Handle instance for account repository
         /// </summary>
-        IAccountServices accountServices = QPC.BMS.Services.DependencyResolution.IoC.Container()
-            .GetInstance<IAccountServices>(TargetImplement.V1.ToString());
+        IAccountRepository accountRepository = Repository.DependencyResolution.IoC.Container()
+            .GetInstance<IAccountRepository>(TargetImplement.V1.ToString());
 
-        public ActionResult Index()
+        public bool Login(string userName, string passWord)
         {
-            logger.EnterMethod();
-            ViewBag.Title = "Home Page";
-
-           if(accountServices.Login("admin", "admin"))
-            {
-                
-            }
-
-            return View();
+            accountRepository.GetAccountsByExpression(x => x.UserName == userName && x.Password == passWord);
+            return true;
         }
     }
 }
