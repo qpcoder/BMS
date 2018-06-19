@@ -25,5 +25,6 @@ namespace QPC.BMS.Helpers
         /// <param name="callerLineNumber"></param>
         /// <param name="callerMember"></param>
         void ReleaseMethod([CallerFilePath] string callerFilePath = "", [CallerLineNumber] long callerLineNumber = 0, [CallerMemberName] string callerMember = "");
+        void Warn(object iNSERT_SUCCESS);
     }
 }

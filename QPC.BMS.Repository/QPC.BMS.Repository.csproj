@@ -80,6 +80,7 @@
     <Compile Include="EF\Setting.cs" />
     <Compile Include="EF\Tag.cs" />
     <Compile Include="EF\University.cs" />
+    <Compile Include="Enum\MessageReponsitory.cs" />
     <Compile Include="IAccountRepository.cs" />
     <Compile Include="ICommentRepository.cs" />
     <Compile Include="ICommonRepository.cs" />

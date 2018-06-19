@@ -7,10 +7,6 @@ namespace QPC.BMS.Helpers.Enum
 {
     public static class MessageContants
     {
-        public const string NOT_FOUND = "No Search Result!";
-
-        public const string LOCKING_DATA = "Looking for alternativers!";
-
-        public const string EMAIL_EXISTS = "Email already exists in the system!";
+        
     }
 }

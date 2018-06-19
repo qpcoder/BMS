@@ -39,7 +39,7 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="models">list accounts</param>
         /// <returns>true or false</returns>
-        Boolean SetListAccounts(List<Account> models);
+        Boolean SetAccounts(List<Account> models);
 
         /// <summary>
         /// Insert object into account
@@ -112,7 +112,7 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="models">list roles</param>
         /// <returns>true or false</returns>
-        Boolean SetListRoles(List<Role> models);
+        Boolean SetRoles(List<Role> models);
 
         /// <summary>
         /// Insert object into role
@@ -178,7 +178,7 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="models">list modules</param>
         /// <returns>true or false</returns>
-        Boolean SetListModules(List<Module> models);
+        Boolean SetModules(List<Module> models);
 
         /// <summary>
         /// Insert object into module
@@ -244,7 +244,7 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="models">list authorizations</param>
         /// <returns>true or false</returns>
-        Boolean SetListAuthorizations(List<Authorization> models);
+        Boolean SetAuthorizations(List<Authorization> models);
 
         /// <summary>
         /// Insert object into authorization

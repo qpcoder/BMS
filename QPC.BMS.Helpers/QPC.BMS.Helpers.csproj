@@ -46,8 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DependencyResolution\HelperRegistry.cs" />
-    <Compile Include="DependencyResolution\IoC.cs" />
+    <Compile Include="Enum\DependencyResolution\HelperRegistry.cs" />
+    <Compile Include="Enum\DependencyResolution\IoC.cs" />
     <Compile Include="EmailHelperImp.cs" />
     <Compile Include="Enum\AccountStatus.cs" />
     <Compile Include="Enum\Gender.cs" />

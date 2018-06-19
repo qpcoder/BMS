@@ -11,6 +11,7 @@ namespace QPC.BMS.Repository
     using QPC.BMS.Helpers;
     using QPC.BMS.Helpers.Enum;
     using QPC.BMS.Repository.EF;
+    using QPC.BMS.Repository.Enum;
 
     /// <summary>
     /// Implementation interface IAccountRepository
@@ -42,14 +43,14 @@ namespace QPC.BMS.Repository
             try
             {
                 db.Accounts.Where(expression);
-                logger.Info("Delete acocunt is successfully!");
+                logger.Info(MessageReponsitory.DELETE_ACCOUNT_SUCCESSFUL);
                 return true;
             }
             catch (Exception e)
             {
-                logger.Warn("Delete account is unsuccessfuly!");
-                logger.Debug("Delete account is unsuccessfuly! " + e.Message);
-                throw new Exception("Delete account is unsuccessfully! " + e.Message);
+                logger.Warn(MessageReponsitory.DELETE_ACCOUNT_UNSUCCESSFUL);
+                logger.Debug($"{MessageReponsitory.DELETE_ACCOUNT_UNSUCCESSFUL} Error message: {e.Message}");
+                throw new Exception($"{MessageReponsitory.DELETE_ACCOUNT_UNSUCCESSFUL} Error message: {e.Message}");
             }
             finally
             {
@@ -72,16 +73,16 @@ namespace QPC.BMS.Repository
             try
             {
                 Account account = db.Accounts.SingleOrDefault(x => x.ID.Equals(accountID));
-                if (account == null) throw new Exception("Account id does not exist!.");
+                if (account == null) throw new Exception(MessageReponsitory.ACCOUNT_NOT_EXISTS);
                 else account.Status = AccountStatus.Deleted;
                 db.SaveChanges();
                 return true;
             }
             catch (Exception e)
             {
-                logger.Warn("Delete account is unsuccessfully!");
-                logger.Debug("Delete account is unsuccessfully!", e);
-                throw new Exception("Delete account is unsuccessfully! ", e);
+                logger.Warn(MessageReponsitory.DELETE_ACCOUNT_UNSUCCESSFUL);
+                logger.Debug(MessageReponsitory.DELETE_ACCOUNT_UNSUCCESSFUL, e);
+                throw new Exception(MessageReponsitory.DELETE_ACCOUNT_UNSUCCESSFUL, e);
             }
             finally
             {
@@ -123,7 +124,7 @@ namespace QPC.BMS.Repository
 
             //log releae method
             logger.ReleaseMethod();
-            throw new NotImplementedException();
+            throw new NotImplementedException("need to develop");
         }
 
         public bool DeleteAuthorization(Func<Authorization, bool> expression)
@@ -212,9 +213,9 @@ namespace QPC.BMS.Repository
             //get account by id
             outPut = db.Accounts.SingleOrDefault(x => x.ID.Equals(accountID));
             if (outPut == null)
-                logger.Info(MessageContants.NOT_FOUND);
+                logger.Info(MessageReponsitory.NOTT_RESULT);
             else
-                logger.Info(MessageContants.LOCKING_DATA);
+                logger.Info(MessageReponsitory.LOCKING_DATA);
 
             //log release method
             logger.ReleaseMethod();
@@ -238,9 +239,9 @@ namespace QPC.BMS.Repository
             lstOut = db.Accounts.Where(expression).ToList();
 
             if (lstOut == null)
-                logger.Info(MessageContants.NOT_FOUND);
+                logger.Info(MessageReponsitory.NOTT_RESULT);
             else
-                logger.Info(MessageContants.LOCKING_DATA);
+                logger.Info(MessageReponsitory.LOCKING_DATA);
 
             ///log release method
             logger.ReleaseMethod();
@@ -263,9 +264,9 @@ namespace QPC.BMS.Repository
             lstOut = db.Accounts.ToList();
 
             if (lstOut == null)
-                logger.Info(MessageContants.NOT_FOUND);
+                logger.Info(MessageReponsitory.NOTT_RESULT);
             else
-                logger.Info(MessageContants.LOCKING_DATA);
+                logger.Info(MessageReponsitory.LOCKING_DATA);
 
             //log release method
             logger.ReleaseMethod();
@@ -288,9 +289,9 @@ namespace QPC.BMS.Repository
             lstOut = db.Authorizations.ToList();
 
             if (lstOut == null)
-                logger.Info(MessageContants.NOT_FOUND);
+                logger.Info(MessageReponsitory.NOTT_RESULT);
             else
-                logger.Info(MessageContants.LOCKING_DATA);
+                logger.Info(MessageReponsitory.LOCKING_DATA);
 
             //log release method
             logger.ReleaseMethod();
@@ -313,9 +314,9 @@ namespace QPC.BMS.Repository
             lstOut = db.Modules.ToList();
 
             if (lstOut == null)
-                logger.Info(MessageContants.NOT_FOUND);
+                logger.Info(MessageReponsitory.NOTT_RESULT);
             else
-                logger.Info(MessageContants.LOCKING_DATA);
+                logger.Info(MessageReponsitory.LOCKING_DATA);
 
             //log release method
             logger.ReleaseMethod();
@@ -335,9 +336,9 @@ namespace QPC.BMS.Repository
             List<Role> lstOut = new List<Role>();
 
             if (lstOut == null)
-                logger.Info(MessageContants.NOT_FOUND);
+                logger.Info(MessageReponsitory.NOTT_RESULT);
             else
-                logger.Info(MessageContants.LOCKING_DATA);
+                logger.Info(MessageReponsitory.LOCKING_DATA);
 
             //log release method
             logger.ReleaseMethod();
@@ -361,9 +362,9 @@ namespace QPC.BMS.Repository
             outPut = db.Authorizations.SingleOrDefault(x => x.ID.Equals(authorizationID));
 
             if (outPut == null)
-                logger.Info(MessageContants.NOT_FOUND);
+                logger.Info(MessageReponsitory.NOTT_RESULT);
             else
-                logger.Info(MessageContants.LOCKING_DATA);
+                logger.Info(MessageReponsitory.LOCKING_DATA);
 
             // log release method
             logger.ReleaseMethod();
@@ -387,9 +388,9 @@ namespace QPC.BMS.Repository
             lstOut = db.Authorizations.Where(expression).ToList();
 
             if (lstOut == null)
-                logger.Info(MessageContants.NOT_FOUND);
+                logger.Info(MessageReponsitory.NOTT_RESULT);
             else
-                logger.Info(MessageContants.LOCKING_DATA);
+                logger.Info(MessageReponsitory.LOCKING_DATA);
 
             //logg release method
             logger.ReleaseMethod();
@@ -413,9 +414,9 @@ namespace QPC.BMS.Repository
             outPut = db.Modules.SingleOrDefault(x => x.ID == moduleID);
 
             if (outPut == null)
-                logger.Info(MessageContants.NOT_FOUND);
+                logger.Info(MessageReponsitory.NOTT_RESULT);
             else
-                logger.Info(MessageContants.LOCKING_DATA);
+                logger.Info(MessageReponsitory.LOCKING_DATA);
 
             //log release method
             logger.ReleaseMethod();
@@ -439,9 +440,9 @@ namespace QPC.BMS.Repository
             lstOut = db.Modules.Where(expression).ToList();
 
             if (lstOut == null)
-                logger.Info(MessageContants.NOT_FOUND);
+                logger.Info(MessageReponsitory.NOTT_RESULT);
             else
-                logger.Info(MessageContants.LOCKING_DATA);
+                logger.Info(MessageReponsitory.LOCKING_DATA);
 
             //log release method
             logger.ReleaseMethod();
@@ -465,9 +466,9 @@ namespace QPC.BMS.Repository
             outPut = db.Roles.SingleOrDefault(x => x.ID == roleID);
 
             if (outPut == null)
-                logger.Info(MessageContants.NOT_FOUND);
+                logger.Info(MessageReponsitory.NOTT_RESULT);
             else
-                logger.Info(MessageContants.LOCKING_DATA);
+                logger.Info(MessageReponsitory.LOCKING_DATA);
 
             //log release method
             logger.ReleaseMethod();
@@ -491,9 +492,9 @@ namespace QPC.BMS.Repository
             lstOut = db.Roles.Where(expression).ToList();
 
             if (lstOut == null)
-                logger.Info(MessageContants.NOT_FOUND);
+                logger.Info(MessageReponsitory.NOTT_RESULT);
             else
-                logger.Info(MessageContants.LOCKING_DATA);
+                logger.Info(MessageReponsitory.LOCKING_DATA);
 
             //log release method
             logger.ReleaseMethod();
@@ -513,22 +514,23 @@ namespace QPC.BMS.Repository
             try
             {
                 //check exists email
-                if (GetAccount(x => x.Email.ToLower().Equals(models.Email.ToLower())) == null)
+                if (GetAccount(x => x.Email.ToLower().Equals(models.Email.ToLower())) != null)
                 {
-                    logger.Warn(MessageContants.EMAIL_EXISTS);
-                    throw new Exception(MessageContants.EMAIL_EXISTS);
+                    logger.Warn(MessageReponsitory.EMAIL_READY_SYSTEM);
+                    throw new Exception(MessageReponsitory.EMAIL_READY_SYSTEM);
                 }
 
                 //insert into database
                 db.Accounts.Add(models);
                 db.SaveChanges();
+                logger.Info(MessageReponsitory.INSERT_DATA_SUCCESSFUL);
                 return true;
             }
             catch (Exception e)
             {
-                logger.Warn("Insert data is unsuccessfully! ");
-                logger.Debug("Insert data is unsuccessfully! " + e.Message);
-                throw new Exception("Insert data is unsuccessfully! " + e.Message);
+                logger.Warn(MessageReponsitory.INSERT_DATA_UNSUCCESSFUL);
+                logger.Debug(MessageReponsitory.INSERT_DATA_UNSUCCESSFUL + e.Message);
+                throw new Exception(MessageReponsitory.INSERT_DATA_UNSUCCESSFUL + e.Message);
             }
             finally
             {
@@ -537,27 +539,72 @@ namespace QPC.BMS.Repository
             }
         }
 
+        /// <summary>
+        /// Insert Authorization
+        /// </summary>
+        /// <param name="models"></param>
+        /// <returns></returns>
         public bool SetAuthorization(Authorization models)
         {
-            throw new NotImplementedException();
+            //log enter method
+            logger.EnterMethod();
+
+            try
+            {
+                //check esists Authorization
+                if (GetAuthorization(x => x.RoleID == models.RoleID && x.ModuleID == models.ModuleID) != null)
+                {
+                    logger.Warn(MessageReponsitory.AUTHORIZATION_EXISTS);
+                    throw new Exception(MessageReponsitory.AUTHORIZATION_EXISTS);
+                }
+
+                //insert data 
+                db.Authorizations.Add(models);
+                db.SaveChanges();
+                logger.Info(MessageReponsitory.INSERT_DATA_SUCCESSFUL);
+                return true;
+            }
+            catch (Exception e)
+            {
+                logger.Warn(MessageReponsitory.INSERT_DATA_UNSUCCESSFUL);
+                logger.Debug(MessageReponsitory.INSERT_DATA_UNSUCCESSFUL + e.Message);
+                throw new Exception(MessageReponsitory.INSERT_DATA_UNSUCCESSFUL + e.Message);
+            }
+            finally
+            {
+                //log release method
+                logger.ReleaseMethod();
+            }
         }
 
-        public bool SetListAccounts(List<Account> models)
+        // Insert list account 
+        public bool SetAccounts(List<Account> models)
+        {
+            //log enter method
+            logger.EnterMethod();
+
+            //process insert
+            foreach(Account a in models)
+            {
+                SetAccount(a);
+            }
+
+            //log release method
+            logger.ReleaseMethod();
+            return true;
+        }
+
+        public bool SetAuthorizations(List<Authorization> models)
         {
             throw new NotImplementedException();
         }
 
-        public bool SetListAuthorizations(List<Authorization> models)
+        public bool SetModules(List<Module> models)
         {
             throw new NotImplementedException();
         }
 
-        public bool SetListModules(List<Module> models)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool SetListRoles(List<Role> models)
+        public bool SetRoles(List<Role> models)
         {
             throw new NotImplementedException();
         }
