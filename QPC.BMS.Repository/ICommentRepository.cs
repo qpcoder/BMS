@@ -12,34 +12,35 @@ namespace QPC.BMS.Repository
 
     public interface ICommentRepository
     {
-        #region Table Download
+        #region Table Comment
 
         /// <summary>
         /// Get all comments
         /// </summary>
-        /// <returns>list comments</returns>
-        IEnumerable<Comment> GetAllComments();
+        /// <param name="postID"></param>
+        /// <returns></returns>
+        IEnumerable<Comment> GetAllComments(Guid postID);
 
         /// <summary>
         /// Get comment by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>list comments</returns>
-        IEnumerable<Comment> GetCommentsByExpression(Func<Comment, bool> expression);
+        IEnumerable<Comment> GetComments(Func<Comment, bool> expression, Guid postID);
 
         /// <summary>
         /// Get comment by id
         /// </summary>
         /// <param name="commentID">comment id</param>
         /// <returns>object comment</returns>
-        Comment GetCommentByID(Guid commentID);
+        Comment GetComment(Guid commentID);
 
         /// <summary>
         /// Insert list comment into database
         /// </summary>
         /// <param name="models">list comments</param>
         /// <returns>true or false</returns>
-        Boolean SetListComments(List<Comment> models);
+        Boolean SetComment(List<Comment> models);
 
         /// <summary>
         /// Insert object into comment
@@ -53,34 +54,28 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean EditCommentByExpression(Func<Comment, bool> expression);
+        Boolean EditComment(Func<Comment, bool> expression);
 
         /// <summary>
         /// Update comment by object
         /// </summary>
         /// <param name="modelEdit">object edit</param>
         /// <returns>true or false</returns>
-        Boolean EditCommentByObject(Comment modelEdit);
+        Boolean EditComment(Comment modelEdit);
 
         /// <summary>
         /// Delete comment by ID
         /// </summary>
         /// <param name="logID">comment id</param>
         /// <returns>true or false</returns>
-        Boolean DeleteCommentByID(Guid commentID);
+        Boolean DeleteComment(Guid commentID);
 
         /// <summary>
         /// Delete comment by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean DeleteCommentByExpression(Func<Comment, bool> expression);
-
-        /// <summary>
-        /// Delete all comments
-        /// </summary>
-        /// <returns>true or false</returns>
-        Boolean DeleteAllComments();
+        Boolean DeleteComment(Func<Comment, bool> expression);
 
         #endregion
     }

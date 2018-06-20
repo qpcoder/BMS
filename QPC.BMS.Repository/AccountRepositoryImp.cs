@@ -22,13 +22,19 @@ namespace QPC.BMS.Repository
         /// <summary>
         /// Handle instance for log4net
         /// </summary>
-        public readonly ILoggingHelper logger = QPC.BMS.Helpers.DependencyResolution.IoC
-          .Container().GetInstance<ILoggingHelper>(TargetImplement.V1.ToString());
+        private readonly ILoggingHelper logger;
 
         /// <summary>
         /// Handle instance connection to database
         /// </summary>
-        private BMSContext db = new BMSContext();
+        private BMSContext db;
+
+        public AccountRepositoryImp()
+        {
+            logger = Helpers.DependencyResolution.IoC
+              .Container().GetInstance<ILoggingHelper>(TargetImplement.V1.ToString());
+            db = new BMSContext();
+        }
 
         /// <summary>
         /// implementtation delete account by expression
@@ -44,14 +50,14 @@ namespace QPC.BMS.Repository
             try
             {
                 db.Accounts.Where(expression);
-                logger.Info(MessageReponsitory.DELETE_ACCOUNT_SUCCESSFUL);
+                logger.Info(MessageReponsitory.DELETE_DATA_SUCCESSFUL);
                 return true;
             }
             catch (Exception e)
             {
-                logger.Warn(MessageReponsitory.DELETE_ACCOUNT_UNSUCCESSFUL);
-                logger.Debug($"{MessageReponsitory.DELETE_ACCOUNT_UNSUCCESSFUL} Error message: {e.Message}");
-                throw new Exception($"{MessageReponsitory.DELETE_ACCOUNT_UNSUCCESSFUL} Error message: {e.Message}");
+                logger.Warn(MessageReponsitory.DELETE_DATA_UNSUCCESSFUL);
+                logger.Debug($"{MessageReponsitory.DELETE_DATA_UNSUCCESSFUL} Error message: {e.Message}");
+                throw new Exception($"{MessageReponsitory.DELETE_DATA_UNSUCCESSFUL} Error message: {e.Message}");
             }
             finally
             {
@@ -81,9 +87,9 @@ namespace QPC.BMS.Repository
             }
             catch (Exception e)
             {
-                logger.Warn(MessageReponsitory.DELETE_ACCOUNT_UNSUCCESSFUL);
-                logger.Debug(MessageReponsitory.DELETE_ACCOUNT_UNSUCCESSFUL, e);
-                throw new Exception(MessageReponsitory.DELETE_ACCOUNT_UNSUCCESSFUL, e);
+                logger.Warn(MessageReponsitory.DELETE_DATA_UNSUCCESSFUL);
+                logger.Debug(MessageReponsitory.DELETE_DATA_UNSUCCESSFUL, e);
+                throw new Exception(MessageReponsitory.DELETE_DATA_UNSUCCESSFUL, e);
             }
             finally
             {
@@ -214,7 +220,7 @@ namespace QPC.BMS.Repository
             //get account by id
             outPut = db.Accounts.SingleOrDefault(x => x.ID.Equals(accountID));
             if (outPut == null)
-                logger.Info(MessageReponsitory.NOTT_RESULT);
+                logger.Info(MessageReponsitory.NOT_RESULT);
             else
                 logger.Info(MessageReponsitory.LOCKING_DATA);
 
@@ -240,7 +246,7 @@ namespace QPC.BMS.Repository
             lstOut = db.Accounts.Where(expression).ToList();
 
             if (lstOut == null)
-                logger.Info(MessageReponsitory.NOTT_RESULT);
+                logger.Info(MessageReponsitory.NOT_RESULT);
             else
                 logger.Info(MessageReponsitory.LOCKING_DATA);
 
@@ -265,7 +271,7 @@ namespace QPC.BMS.Repository
             lstOut = db.Accounts.ToList();
 
             if (lstOut == null)
-                logger.Info(MessageReponsitory.NOTT_RESULT);
+                logger.Info(MessageReponsitory.NOT_RESULT);
             else
                 logger.Info(MessageReponsitory.LOCKING_DATA);
 
@@ -290,7 +296,7 @@ namespace QPC.BMS.Repository
             lstOut = db.Authorizations.ToList();
 
             if (lstOut == null)
-                logger.Info(MessageReponsitory.NOTT_RESULT);
+                logger.Info(MessageReponsitory.NOT_RESULT);
             else
                 logger.Info(MessageReponsitory.LOCKING_DATA);
 
@@ -315,7 +321,7 @@ namespace QPC.BMS.Repository
             lstOut = db.Modules.ToList();
 
             if (lstOut == null)
-                logger.Info(MessageReponsitory.NOTT_RESULT);
+                logger.Info(MessageReponsitory.NOT_RESULT);
             else
                 logger.Info(MessageReponsitory.LOCKING_DATA);
 
@@ -337,7 +343,7 @@ namespace QPC.BMS.Repository
             List<Role> lstOut = new List<Role>();
 
             if (lstOut == null)
-                logger.Info(MessageReponsitory.NOTT_RESULT);
+                logger.Info(MessageReponsitory.NOT_RESULT);
             else
                 logger.Info(MessageReponsitory.LOCKING_DATA);
 
@@ -363,7 +369,7 @@ namespace QPC.BMS.Repository
             outPut = db.Authorizations.SingleOrDefault(x => x.ID.Equals(authorizationID));
 
             if (outPut == null)
-                logger.Info(MessageReponsitory.NOTT_RESULT);
+                logger.Info(MessageReponsitory.NOT_RESULT);
             else
                 logger.Info(MessageReponsitory.LOCKING_DATA);
 
@@ -389,7 +395,7 @@ namespace QPC.BMS.Repository
             lstOut = db.Authorizations.Where(expression).ToList();
 
             if (lstOut == null)
-                logger.Info(MessageReponsitory.NOTT_RESULT);
+                logger.Info(MessageReponsitory.NOT_RESULT);
             else
                 logger.Info(MessageReponsitory.LOCKING_DATA);
 
@@ -415,7 +421,7 @@ namespace QPC.BMS.Repository
             outPut = db.Modules.SingleOrDefault(x => x.ID == moduleID);
 
             if (outPut == null)
-                logger.Info(MessageReponsitory.NOTT_RESULT);
+                logger.Info(MessageReponsitory.NOT_RESULT);
             else
                 logger.Info(MessageReponsitory.LOCKING_DATA);
 
@@ -441,7 +447,7 @@ namespace QPC.BMS.Repository
             lstOut = db.Modules.Where(expression).ToList();
 
             if (lstOut == null)
-                logger.Info(MessageReponsitory.NOTT_RESULT);
+                logger.Info(MessageReponsitory.NOT_RESULT);
             else
                 logger.Info(MessageReponsitory.LOCKING_DATA);
 
@@ -467,7 +473,7 @@ namespace QPC.BMS.Repository
             outPut = db.Roles.SingleOrDefault(x => x.ID == roleID);
 
             if (outPut == null)
-                logger.Info(MessageReponsitory.NOTT_RESULT);
+                logger.Info(MessageReponsitory.NOT_RESULT);
             else
                 logger.Info(MessageReponsitory.LOCKING_DATA);
 
@@ -493,7 +499,7 @@ namespace QPC.BMS.Repository
             lstOut = db.Roles.Where(expression).ToList();
 
             if (lstOut == null)
-                logger.Info(MessageReponsitory.NOTT_RESULT);
+                logger.Info(MessageReponsitory.NOT_RESULT);
             else
                 logger.Info(MessageReponsitory.LOCKING_DATA);
 
