@@ -35,13 +35,6 @@ namespace QPC.BMS.Repository
         Account GetAccount(Guid accountID);
 
         /// <summary>
-        /// Insert list account into database
-        /// </summary>
-        /// <param name="models">list accounts</param>
-        /// <returns>true or false</returns>
-        Boolean SetAccounts(List<Account> models);
-
-        /// <summary>
         /// Insert object into account
         /// </summary>
         /// <param name="models">object account</param>
@@ -108,13 +101,6 @@ namespace QPC.BMS.Repository
         Role GetRole(int roleID);
 
         /// <summary>
-        /// Insert list role into database
-        /// </summary>
-        /// <param name="models">list roles</param>
-        /// <returns>true or false</returns>
-        Boolean SetRoles(List<Role> models);
-
-        /// <summary>
         /// Insert object into role
         /// </summary>
         /// <param name="models">object role</param>
@@ -174,13 +160,6 @@ namespace QPC.BMS.Repository
         Module GetModule(int moduleID);
 
         /// <summary>
-        /// Insert list module into database
-        /// </summary>
-        /// <param name="models">list modules</param>
-        /// <returns>true or false</returns>
-        Boolean SetModules(List<Module> models);
-
-        /// <summary>
         /// Insert object into module
         /// </summary>
         /// <param name="models">object module</param>
@@ -238,13 +217,6 @@ namespace QPC.BMS.Repository
         /// <param name="authorizationID">authorization id</param>
         /// <returns>object authorization</returns>
         Authorization GetAuthorization(Guid authorizationID);
-
-        /// <summary>
-        /// Insert list authorization into database
-        /// </summary>
-        /// <param name="models">list authorizations</param>
-        /// <returns>true or false</returns>
-        Boolean SetAuthorizations(List<Authorization> models);
 
         /// <summary>
         /// Insert object into authorization

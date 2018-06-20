@@ -8,6 +8,7 @@ namespace QPC.BMS.Repository
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Text;
     using QPC.BMS.Helpers;
     using QPC.BMS.Helpers.Enum;
     using QPC.BMS.Repository.EF;
@@ -577,46 +578,68 @@ namespace QPC.BMS.Repository
             }
         }
 
-        // Insert list account 
-        public bool SetAccounts(List<Account> models)
+        /// <summary>
+        /// Them mot object module moi
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public bool SetModule(Module model)
         {
-            //log enter method
+            ///log enter method
             logger.EnterMethod();
 
-            //process insert
-            foreach(Account a in models)
+            //kiem tra xem module them vao co trong he thong hay chua
+            Module module = db.Modules.Where(x => x.Name.ToLower().Equals(model.Name.ToLower())).FirstOrDefault();
+            try
             {
-                SetAccount(a);
+                if (module != null) throw new Exception($"{MessageReponsitory.MODULE_EXISTS}");
+                db.Modules.Add(model);
+                db.SaveChanges();
+                return true;
             }
-
-            //log release method
-            logger.ReleaseMethod();
-            return true;
+            catch (Exception e)
+            {
+                logger.Error($"{MessageReponsitory.INSERT_DATA_UNSUCCESSFUL}");
+                logger.Debug($"{MessageReponsitory.INSERT_DATA_UNSUCCESSFUL} Message error: {e.Message}");
+                throw new Exception($"{MessageReponsitory.INSERT_DATA_UNSUCCESSFUL} Message error: {e.Message}");
+            }
+            finally
+            {
+                //log release method
+                logger.ReleaseMethod();
+            }
         }
 
-        public bool SetAuthorizations(List<Authorization> models)
+        /// <summary>
+        /// them roles
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public bool SetRole(Role model)
         {
-            throw new NotImplementedException();
-        }
+            ///log enter method
+            logger.EnterMethod();
 
-        public bool SetModules(List<Module> models)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool SetRoles(List<Role> models)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool SetModule(Module models)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool SetRole(Role models)
-        {
-            throw new NotImplementedException();
+            //kiem tra xem module them vao co trong he thong hay chua
+            Role role = db.Roles.Where(x => x.Name.ToLower().Equals(model.Name.ToLower())).FirstOrDefault();
+            try
+            {
+                if (role != null) throw new Exception($"{MessageReponsitory.ROLE_EXISTS}");
+                db.Roles.Add(model);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"{MessageReponsitory.INSERT_DATA_UNSUCCESSFUL}");
+                logger.Debug($"{MessageReponsitory.INSERT_DATA_UNSUCCESSFUL} Message error: {e.Message}");
+                throw new Exception($"{MessageReponsitory.INSERT_DATA_UNSUCCESSFUL} Message error: {e.Message}");
+            }
+            finally
+            {
+                //log release method
+                logger.ReleaseMethod();
+            }
         }
     }
 }

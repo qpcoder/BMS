@@ -24,5 +24,9 @@ namespace QPC.BMS.Repository.Enum
         public const string EMAIL_READY_SYSTEM = "Email already exists in the system!";
 
         public const string AUTHORIZATION_EXISTS = "Authorization already in the system!";
+
+        public const string MODULE_EXISTS = "Module already in the system!";
+
+        public const string ROLE_EXISTS = "Role already in the system!";
     }
 }
