@@ -36,6 +36,10 @@ namespace QPC.BMS.Repository.EF
         [Required]
         public string Password { set; get; }
 
+        public string ApiKey { set; get; }
+
+        public string SecerectKey{ set; get; }
+
         /// <summary>
         /// 
         /// </summary>
@@ -174,12 +178,6 @@ namespace QPC.BMS.Repository.EF
         /// 
         /// </summary>
         public DateTime? DateUpdated { set; get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [DefaultValue(false)]
-        public Boolean? IsStudent { set; get; }
 
         /// <summary>
         /// 

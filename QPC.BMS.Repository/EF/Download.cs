@@ -47,7 +47,9 @@ namespace QPC.BMS.Repository.EF
         /// 
         /// </summary>
         [DefaultValue(0)]
-        public int DownlaodCount { set; get; }
+        public int TotalDowload { set; get; }
+
+        public string IPAddress { set; get; }
 
         /// <summary>
         /// 

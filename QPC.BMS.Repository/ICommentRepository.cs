@@ -26,14 +26,14 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>list comments</returns>
-        IEnumerable<Comment> GetComments(Func<Comment, bool> expression, Guid postID);
+        IEnumerable<Comment> GetComments(Func<Comment, bool> expression);
 
         /// <summary>
         /// Get comment by id
         /// </summary>
         /// <param name="commentID">comment id</param>
         /// <returns>object comment</returns>
-        Comment GetComment(Guid commentID);
+        Comment GetComment(Guid commentID, Guid postID);
 
         /// <summary>
         /// Insert list comment into database

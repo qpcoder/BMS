@@ -246,14 +246,67 @@ namespace QPC.BMS.Repository
             }
         }
 
+        /// <summary>
+        /// Lay comment theo lamdar expression
+        /// </summary>
+        /// <param name="expression"></param>
+        /// <returns></returns>
         public IEnumerable<Comment> GetComments(Func<Comment, bool> expression)
         {
-            throw new NotImplementedException();
+            //log enter method
+            logger.EnterMethod();
+
+            try
+            {
+                List<Comment> lstComment = db.Comments.Where(expression).ToList();
+
+                //kiem tra xem co ton tai comment nao khong
+                if (lstComment == null) throw new Exception(MessageReponsitory.POST_NOT_COMMENT);
+
+                logger.Info(MessageReponsitory.SEARCH_SUCCESSFUL);
+                return lstComment;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"{MessageReponsitory.NOT_RESULT}");
+                logger.Debug($"{MessageReponsitory.NOT_RESULT} Message: {e.Message}");
+                throw new Exception($"{MessageReponsitory.NOT_RESULT} Message: {e.Message}");
+            }
+            finally
+            {
+                //log release method
+                logger.ReleaseMethod();
+            }
         }
 
-        public bool SetComment(Comment models)
+        /// <summary>
+        /// Them comment moi
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public bool SetComment(Comment model)
         {
-            throw new NotImplementedException();
+            //log enter method
+            logger.EnterMethod();
+
+            try
+            {
+                if (db.Accounts.Where(x => x.ID.Equals(model.AccountID)).FirstOrDefault() == null)
+                    throw new Exception(MessageReponsitory.ACCOUNT_NOT_EXISTS);
+                return true;
+                
+            }
+            catch (Exception ex)
+            {
+                logger.Error($"{MessageReponsitory.INSERT_DATA_UNSUCCESSFUL}");
+                logger.Debug($"{MessageReponsitory.INSERT_DATA_UNSUCCESSFUL} Message: {ex.Message}");
+                throw new Exception($"{MessageReponsitory.INSERT_DATA_UNSUCCESSFUL} Message: {ex.Message}");
+            }
+            finally
+            {
+                //log release method
+                logger.ReleaseMethod();
+            }
         }
 
         public bool SetComment(List<Comment> models)
