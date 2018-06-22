@@ -1,5 +1,4 @@
 ﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\NUnit.3.10.1\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.10.1\build\NUnit.props')" />
   <Import Project="..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,12 +6,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{43509A7B-6071-4F4C-8264-6B98B90DBE6E}</ProjectGuid>
+    <ProjectGuid>{5C98449F-FF48-4251-A614-69F809348AFB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QPC.BMS.UnitTests</RootNamespace>
     <AssemblyName>QPC.BMS.UnitTests</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <NuGetPackageImportStamp>
@@ -36,18 +35,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework">
       <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions">
       <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework, Version=3.10.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.3.10.1\lib\net45\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="StructureMap, Version=4.6.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\StructureMap.4.6.1\lib\net45\StructureMap.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -117,34 +119,29 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QPC.BMS.Domain\QPC.BMS.Domain.csproj">
-      <Project>{03a5af68-4ae1-41e6-b4b4-a14f25ccfac7}</Project>
+      <Project>{98f35b2c-4635-42a2-a43d-b89e464bcfba}</Project>
       <Name>QPC.BMS.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\QPC.BMS.Helpers\QPC.BMS.Helpers.csproj">
-      <Project>{b27ecdd9-9c22-44fb-9568-3a5c0bcfbcbc}</Project>
+      <Project>{d87874d6-ec9f-43b1-bc4d-2fb7e7e4bf18}</Project>
       <Name>QPC.BMS.Helpers</Name>
     </ProjectReference>
     <ProjectReference Include="..\QPC.BMS.Models\QPC.BMS.Models.csproj">
-      <Project>{fc9f1291-61d1-4919-842d-fa5b0b430278}</Project>
+      <Project>{fbe35685-27b4-4048-854d-41bdea93364f}</Project>
       <Name>QPC.BMS.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\QPC.BMS.Repository\QPC.BMS.Repository.csproj">
-      <Project>{2ddb10d4-6686-491c-b8c5-5a5ec5b752ea}</Project>
+      <Project>{c73ce101-73b7-477b-ac3b-724ea8655b21}</Project>
       <Name>QPC.BMS.Repository</Name>
     </ProjectReference>
     <ProjectReference Include="..\QPC.BMS.Services\QPC.BMS.Services.csproj">
-      <Project>{e51342af-78ee-4376-ba76-bf72e67a14a2}</Project>
+      <Project>{a145ffe6-4d71-4b8b-8961-465bb38bece7}</Project>
       <Name>QPC.BMS.Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\QPC.BMS.WebApp\QPC.BMS.WebApp.csproj">
-      <Project>{2A481CCB-AE6F-44BC-A6CA-34CF45BB2AB9}</Project>
-      <Name>QPC.BMS.WebApp</Name>
+    <ProjectReference Include="..\QPC.BMS.WepApp\QPC.BMS.WepApp.csproj">
+      <Project>{329AB116-FC19-4DB6-BC1B-9F2FC37D6486}</Project>
+      <Name>QPC.BMS.WepApp</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Domain\" />
-    <Folder Include="Helper\" />
-    <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
@@ -153,10 +150,8 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props'))" />
     <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets'))" />
-    <Error Condition="!Exists('..\packages\NUnit.3.10.1\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.10.1\build\NUnit.props'))" />
   </Target>
   <Import Project="..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets')" />
-  <Import Project="H:\qp.dll\StyleCop\StyleCop.MSBuild.4.7.49.0\build\StyleCop.MSBuild.Targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

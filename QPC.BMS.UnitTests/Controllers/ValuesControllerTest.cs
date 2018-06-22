@@ -1,17 +1,12 @@
-﻿/// <summary>
-/// <company> Nguyen Quy Blogger </company>
-/// <author> Nguyen Quy </author>
-/// <copyright> Copyright © 2018. All right reserver. </copyright
-/// </summary>
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Web.Http;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using QPC.BMS.WebApp;
-using QPC.BMS.WebApp.Controllers;
+using QPC.BMS.WepApp;
+using QPC.BMS.WepApp.Controllers;
 
 namespace QPC.BMS.UnitTests.Controllers
 {
