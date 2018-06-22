@@ -18,6 +18,29 @@ namespace QPC.BMS.WepApp
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            ///Connfiguration Log4Net
+            log4net.Config.XmlConfigurator.Configure();
+        }
+
+        protected void Session_Start()
+        {
+
+        }
+
+        protected void Session_End()
+        {
+
+        }
+
+        protected void Application_Error()
+        {
+
+        }
+
+        protected void Application_End()
+        {
+
         }
     }
 }
