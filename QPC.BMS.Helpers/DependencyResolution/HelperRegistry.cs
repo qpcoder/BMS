@@ -22,7 +22,7 @@ namespace QPC.BMS.Helpers.DependencyResolution
             //For<ISpeedSMSHelper>().Use<SpeedSmsImp>().Name = TargetImplement.V1.ToString();
             //For<IEmailHelper>().Use<EmailHelperImp>().Name = TargetImplement.V1.ToString();
             //For<IValidateHelper>().Use<ValidateHelperImp>().Name = TargetImplement.V1.ToString();
-            //For<ILoggingHelper>().Use<LoggingHelperImp>().Name = TargetImplement.V1.ToString();
+            For<ILoggingHelper>().Use<LoggingHelperImp>().Name = TargetImplement.V1.ToString();
             #endregion
         }
     }
