@@ -3,13 +3,13 @@
 /// <author> Nguyen Quy </author>
 /// <copyright> Copyright © 2018. All right reserver. </copyright
 /// </summary>
-namespace QPC.BMS.Repository.EF
+namespace QPC.BMS.Models
 {
     using System;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
-    public class NavigationMenu
+    public class NavigationMenuModel
     {
         [Key]
         [Required]
@@ -18,8 +18,14 @@ namespace QPC.BMS.Repository.EF
 
         public string DisplayName { set; get; }
 
+        /// <summary>
+        /// Menu cha cua thang hien tai
+        /// </summary>
         public string MenuParentID { set; get; }
 
+        /// <summary>
+        /// Duong dan truy cap den chuc nang do
+        /// </summary>
         public string URL { set; get; }
 
         public DateTime? DateCreate { set; get; }

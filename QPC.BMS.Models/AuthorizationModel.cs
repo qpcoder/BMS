@@ -3,32 +3,37 @@
 /// <author> Nguyen Quy </author>
 /// <copyright> Copyright © 2018. All right reserver. </copyright
 /// </summary>
-namespace QPC.BMS.Repository.EF
+namespace QPC.BMS.Models
 {
     using System;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
-    public class District
+    public class AuthorizationModel
     {
         [Key]
         [Required]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
-
-        public string Name { set; get; }
-
-        public int Code { set; get; }
-
-        public string Description { set; get; }
-
-        public int ProvinceID { set; get; }
-        public virtual Province Province { set; get; }
-
+        
+        public int RoleID { set; get; }
+        public virtual RoleModel Role{ set; get; }
+        
+        public int ModuleID { set; get; }
+        public virtual ModuleModel Module{ set; get; }
+        
+        public Boolean? AuView { set; get; }
+        
+        public Boolean? AuInsert { set; get; }
+        
+        public Boolean? AuUpdate { set; get; }
+        
+        public Boolean? AuDelete { set; get; }
+        
         public DateTime? DateCreate { set; get; }
-
+        
         public DateTime? DateUpdate { set; get; }
-
+        
         public Boolean Status { set; get; }
     }
 }

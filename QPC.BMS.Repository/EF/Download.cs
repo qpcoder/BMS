@@ -25,12 +25,16 @@ namespace QPC.BMS.Repository.EF
         public int AccountID { set; get; }
         public virtual Account Account { set; get; }
 
+        /// <summary>
+        /// Tong so luot tai cho lien ket hien tai
+        /// </summary>
         public int TotalClick { set; get; }
 
         public string LinkDownload { set; get; }
 
-        public string IPAddress { set; get; }
-
         public Boolean Status { set; get; }
-    }
+
+
+        public virtual IEquatable<DownloadTracking> DownloadTrackings{ set; get; }
+     }
 }

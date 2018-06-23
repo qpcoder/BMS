@@ -3,32 +3,29 @@
 /// <author> Nguyen Quy </author>
 /// <copyright> Copyright © 2018. All right reserver. </copyright
 /// </summary>
-namespace QPC.BMS.Repository.EF
+namespace QPC.BMS.Models
 {
     using System;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
-    public class Faculty
+    public class RefPostWithTagModel
     {
         [Key]
         [Required]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
 
-        public string Code { set; get; }
+        public int TagID { set; get; }
+        public TagModel Tag { set; get; }
 
-        public int UniversityID { set; get; }
-        public virtual University University { set; get; }
-
-        public string Name { set; get; }
-
-        public string Description { set; get; }
+        public int PostID { set; get; }
+        public virtual PostModel Post { set; get; }
 
         public DateTime? DateCreate { set; get; }
 
         public DateTime? DateUpdate { set; get; }
 
-        public Boolean Status { set; get; }
+        public Boolean Satus { set; get; }
     }
 }

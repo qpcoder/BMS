@@ -6,6 +6,7 @@
 namespace QPC.BMS.Repository.EF
 {
     using System;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
@@ -38,14 +39,39 @@ namespace QPC.BMS.Repository.EF
    
         public Boolean? AllowComment { set; get; }
         
+        /// <summary>
+        /// Tong so binh luan
+        /// </summary>
         public int CommentTotal { set; get; }
 
+        /// <summary>
+        /// Mac dinh bagn 0.
+        /// Set nguoi dung dat bao nhieu sao thi moi co quen xem noi dung bai viet nay.
+        /// </summary>
+        [DefaultValue(0)]
         public int StarLevel { set; get; }
         
+        /// <summary>
+        /// So nguoi dung thich
+        /// </summary>
         public int UpVote { set; get; }
         
+        /// <summary>
+        /// Nguoi dung khong thich
+        /// </summary>
         public int DownVote { set; get; }
 
+        /// <summary>
+        /// Tac gia cua bai dang
+        /// </summary>
+        public int AuthorPostID { set; get; }
+        public virtual AuthorPost AuthorPost{ set; get; }
+
         public Boolean Status { set; get; }
+
+
+        public virtual IEquatable<Comment> Comments{ set; get; }
+
+        public virtual IEquatable<RefPostWithTag> RefPostWithTags{ set; get; }
     }
 }

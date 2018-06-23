@@ -3,13 +3,13 @@
 /// <author> Nguyen Quy </author>
 /// <copyright> Copyright © 2018. All right reserver. </copyright
 /// </summary>
-namespace QPC.BMS.Repository.EF
+namespace QPC.BMS.Models
 {
     using System;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
-    public class Media
+    public class MediaModel
     {
         [Key]
         [Required]
@@ -17,10 +17,10 @@ namespace QPC.BMS.Repository.EF
         public string ID { set; get; }
 
         public int MediaTypeID { set; get; }
-        public MediaType MediaType { set; get; }
+        public MediaTypeModel MediaType { set; get; }
 
         public int AccountID { set; get; }
-        public virtual Account Account { set; get; }
+        public virtual AccountModel Account { set; get; }
 
         public string FileName { set; get; }
 

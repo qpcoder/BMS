@@ -3,27 +3,38 @@
 /// <author> Nguyen Quy </author>
 /// <copyright> Copyright © 2018. All right reserver. </copyright
 /// </summary>
-namespace QPC.BMS.Repository.EF
+namespace QPC.BMS.Models
 {
     using System;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
-    public class Setting
+    public class DistrictModel
     {
         [Key]
         [Required]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
 
-        public string Key { set; get; }
+        public string Name { set; get; }
 
+        /// <summary>
+        /// Ma Quan / Huyen
+        /// </summary>
+        public int Code { set; get; }
 
-        public string Value { set; get; }
+        public string Description { set; get; }
 
-        public Boolean? IsAutoLoad { set; get; }
+        public int ProvinceID { set; get; }
+        public virtual ProvinceModel Province { set; get; }
+
         public DateTime? DateCreate { set; get; }
+
         public DateTime? DateUpdate { set; get; }
+
         public Boolean Status { set; get; }
+
+
+        public virtual IEquatable<UniversityModel> Universities{ set; get; }
     }
 }

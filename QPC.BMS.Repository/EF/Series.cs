@@ -21,8 +21,6 @@ namespace QPC.BMS.Repository.EF
 
         public string Name { set; get; }
 
-        public string Code { set; get; }
-
         public string Permalink { set; get; }
 
         public string Excerpt { set; get; }
@@ -33,8 +31,14 @@ namespace QPC.BMS.Repository.EF
 
         public DateTime? DateUpdate { set; get; }
 
+        /// <summary>
+        /// Tong so bai viet thuoc seriries nay
+        /// </summary>
         public int PostCount { set; get; }
 
         public Boolean Status { set; get; }
+
+
+        public virtual IEquatable<Post> Posts{ set; get; }
     }
 }

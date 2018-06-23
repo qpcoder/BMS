@@ -18,8 +18,14 @@ namespace QPC.BMS.Repository.EF
 
         public string DisplayName { set; get; }
 
+        /// <summary>
+        /// Menu cha cua thang hien tai
+        /// </summary>
         public string MenuParentID { set; get; }
 
+        /// <summary>
+        /// Duong dan truy cap den chuc nang do
+        /// </summary>
         public string URL { set; get; }
 
         public DateTime? DateCreate { set; get; }

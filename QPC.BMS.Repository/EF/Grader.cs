@@ -16,7 +16,10 @@ namespace QPC.BMS.Repository.EF
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
 
-        public int Code { set; get; }
+        /// <summary>
+        /// Ma lop
+        /// </summary>
+        public string Code { set; get; }
 
         public string Name { set; get; }
 
@@ -30,5 +33,8 @@ namespace QPC.BMS.Repository.EF
         public DateTime? DateUpdate { set; get; }
 
         public string Status { set; get; }
+
+
+        public virtual IEquatable<Account> Account{ set; get; }
     }
 }

@@ -19,12 +19,18 @@ namespace QPC.BMS.Repository.EF
         public int SocialTypeID { set; get; }
         public virtual SocialType SocialType { set; get; }
 
-        public int AccountJD { set; get; }
+        public int AccountID { set; get; }
         public virtual Account Account { set; get; }
 
+        /// <summary>
+        /// Ten goi Api cho mang do dang dung
+        /// </summary>
         public string ApiKey { set; get; }
 
-        public string SecrectKey { set; get; }
+        /// <summary>
+        /// Gia tri cho api Key do
+        /// </summary>
+        public string ApiValue { set; get; }
 
         public DateTime? DateCreate { set; get; }
 

@@ -16,6 +16,9 @@ namespace QPC.BMS.Repository.EF
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
 
+        /// <summary>
+        /// Ma cua khoa
+        /// </summary>
         public string Code { set; get; }
 
         public int UniversityID { set; get; }
@@ -30,5 +33,8 @@ namespace QPC.BMS.Repository.EF
         public DateTime? DateUpdate { set; get; }
 
         public Boolean Status { set; get; }
+
+
+        public virtual IEquatable<Grader> Graders{ set; get; }
     }
 }

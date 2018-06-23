@@ -20,10 +20,18 @@ namespace QPC.BMS.Repository.EF
 
         public string Description { set; get; }
 
+        /// <summary>
+        /// Tong so tanh vien duoc phan cho quen nay
+        /// </summary>
         public string TotalMember { set; get; }
 
         public DateTime DateCreate { set; get; }
 
         public string Status { set; get; }
+
+
+        public virtual IEquatable<Authorization> Authorizations { set; get; }
+
+        public virtual IEquatable<Account> Accounts { set; get; }
     }
 }

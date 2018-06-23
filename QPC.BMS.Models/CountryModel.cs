@@ -3,37 +3,40 @@
 /// <author> Nguyen Quy </author>
 /// <copyright> Copyright © 2018. All right reserver. </copyright
 /// </summary>
-namespace QPC.BMS.Repository.EF
+namespace QPC.BMS.Models
 {
     using System;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
-    public class Authorization
+    public class CountryModel
     {
         [Key]
         [Required]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
-        
-        public int RoleID { set; get; }
-        public virtual Role Role{ set; get; }
-        
-        public int ModuleID { set; get; }
-        public virtual Module Module{ set; get; }
-        
-        public Boolean? AuView { set; get; }
-        
-        public Boolean? AuInsert { set; get; }
-        
-        public Boolean? AuUpdate { set; get; }
-        
-        public Boolean? AuDelete { set; get; }
-        
+
+        /// <summary>
+        /// ma vungf cua quoc gia nay
+        /// </summary>
+        public int Code { set; get; }
+
+        /// <summary>
+        /// Ma ngon ngu cua quoc gia nay
+        /// </summary>
+        public string Lang { set; get; }
+
+        public string Name { set; get; }
+
+        public string Description { set; get; }
+
         public DateTime? DateCreate { set; get; }
-        
+
         public DateTime? DateUpdate { set; get; }
-        
+
         public Boolean Status { set; get; }
+
+
+        public IEquatable<ProvinceModel> Provinces{ set; get; }
     }
 }

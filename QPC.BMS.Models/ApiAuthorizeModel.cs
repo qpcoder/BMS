@@ -3,13 +3,14 @@
 /// <author> Nguyen Quy </author>
 /// <copyright> Copyright © 2018. All right reserver. </copyright
 /// </summary>
-namespace QPC.BMS.Repository.EF
+namespace QPC.BMS.Models
 {
     using System;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
-    public class Series
+    public class ApiAuthorizeModel
     {
         [Key]
         [Required]
@@ -17,24 +18,20 @@ namespace QPC.BMS.Repository.EF
         public int ID { set; get; }
 
         public int AccountID { set; get; }
-        public virtual Account Account { set; get; }
-
-        public string Name { set; get; }
-
-        public string Code { set; get; }
-
-        public string Permalink { set; get; }
-
-        public string Excerpt { set; get; }
-
-        public string Description { set; get; }
+        public virtual AccountModel Account { set; get; }
 
         public DateTime? DateCreate { set; get; }
 
-        public DateTime? DateUpdate { set; get; }
+        /// <summary>
+        /// Mac dinh: API cua tai khan se bi vo hieu hoa
+        /// </summary>
+        [DefaultValue(false)]
+        public Boolean? IsActive { set; get; }
 
-        public int PostCount { set; get; }
+        public string Apikey { set; get; }
 
-        public Boolean Status { set; get; }
+        public string SecretKey { set; get; }
+
+        public DateTime? DateModified { set; get; }
     }
 }

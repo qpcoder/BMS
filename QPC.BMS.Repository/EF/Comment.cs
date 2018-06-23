@@ -16,23 +16,37 @@ namespace QPC.BMS.Repository.EF
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
 
+        /// <summary>
+        /// Cho phep null
+        /// </summary>
         public int AccountID { set; get; }
-        public virtual Account Account { set; get; }
 
         public int PostID { set; get; }
         public virtual Post Post { set; get; }
 
         public string Content { set; get; }
 
+        /// <summary>
+        /// Nguoi doc thich binh luan nay
+        /// </summary>
         public int UpVote { set; get; }
 
+        /// <summary>
+        /// Nguoi doc khong thich binh luan nay
+        /// </summary>
         public int DownVote { set; get; }
 
+        /// <summary>
+        /// IP nguoi dung thuc hien binh luan
+        /// </summary>
         public string IPAddress { set; get; }
 
+        /// <summary>
+        /// Binh luan cha cua binh luan nay
+        /// </summary>
         public int CommentParentID { set; get; }
 
-        public DateTime DateCreate { set; get; }
+        public DateTime? DateCreate { set; get; }
 
         public Boolean Status { set; get; }
     }

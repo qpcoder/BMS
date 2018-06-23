@@ -18,6 +18,9 @@ namespace QPC.BMS.Repository.EF
 
         public string Name { set; get; }
 
+        /// <summary>
+        /// Ma Quan / Huyen
+        /// </summary>
         public int Code { set; get; }
 
         public string Description { set; get; }
@@ -30,5 +33,8 @@ namespace QPC.BMS.Repository.EF
         public DateTime? DateUpdate { set; get; }
 
         public Boolean Status { set; get; }
+
+
+        public virtual IEquatable<University> Universities{ set; get; }
     }
 }

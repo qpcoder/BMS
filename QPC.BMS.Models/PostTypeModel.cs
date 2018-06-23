@@ -3,13 +3,13 @@
 /// <author> Nguyen Quy </author>
 /// <copyright> Copyright © 2018. All right reserver. </copyright
 /// </summary>
-namespace QPC.BMS.Repository.EF
+namespace QPC.BMS.Models
 {
     using System;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
-    public class PostType
+    public class PostTypeModel
     {
         [Key]
         [Required]
@@ -27,10 +27,13 @@ namespace QPC.BMS.Repository.EF
         public DateTime? DateUpdate { set; get; }
 
         public int FeatureImageID { set; get; }
-        public virtual Media Media { set; get; }
+        public virtual MediaModel Media { set; get; }
 
         public int PostCount { set; get; }
 
         public Boolean Status { set; get; }
+
+
+        public virtual IEquatable<PostModel> Posts{ set; get; }
     }
 }

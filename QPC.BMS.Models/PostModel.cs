@@ -3,13 +3,14 @@
 /// <author> Nguyen Quy </author>
 /// <copyright> Copyright © 2018. All right reserver. </copyright
 /// </summary>
-namespace QPC.BMS.Repository.EF
+namespace QPC.BMS.Models
 {
     using System;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
-    public class Post
+    public class PostModel
     {
         [Key]
         [Required]
@@ -19,7 +20,7 @@ namespace QPC.BMS.Repository.EF
         public int AccountID { set; get; }
 
         public int PostTypeID { set; get; }
-        public virtual PostType PostType{ set; get; }
+        public virtual PostTypeModel PostType{ set; get; }
         
         public DateTime? DateCreate { set; get; }
         
@@ -34,18 +35,43 @@ namespace QPC.BMS.Repository.EF
         public string Content { set; get; }
         
         public int FeaturedImageID { set; get; }
-        public virtual Media Media { set; get; }
+        public virtual MediaModel Media { set; get; }
    
         public Boolean? AllowComment { set; get; }
         
+        /// <summary>
+        /// Tong so binh luan
+        /// </summary>
         public int CommentTotal { set; get; }
 
+        /// <summary>
+        /// Mac dinh bagn 0.
+        /// Set nguoi dung dat bao nhieu sao thi moi co quen xem noi dung bai viet nay.
+        /// </summary>
+        [DefaultValue(0)]
         public int StarLevel { set; get; }
         
+        /// <summary>
+        /// So nguoi dung thich
+        /// </summary>
         public int UpVote { set; get; }
         
+        /// <summary>
+        /// Nguoi dung khong thich
+        /// </summary>
         public int DownVote { set; get; }
 
+        /// <summary>
+        /// Tac gia cua bai dang
+        /// </summary>
+        public int AuthorPostID { set; get; }
+        public virtual AuthorPostModel AuthorPost{ set; get; }
+
         public Boolean Status { set; get; }
+
+
+        public virtual IEquatable<CommentModel> Comments{ set; get; }
+
+        public virtual IEquatable<RefPostWithTagModel> RefPostWithTags{ set; get; }
     }
 }

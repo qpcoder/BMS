@@ -21,5 +21,8 @@ namespace QPC.BMS.Repository.EF
         public DateTime? DateCreate { set; get; }
 
         public Boolean Status { set; get; }
+
+
+        public virtual IEquatable<SocialApi> SocialApi { set; get; }
     }
 }

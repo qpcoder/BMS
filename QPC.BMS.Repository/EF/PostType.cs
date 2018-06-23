@@ -32,5 +32,8 @@ namespace QPC.BMS.Repository.EF
         public int PostCount { set; get; }
 
         public Boolean Status { set; get; }
+
+
+        public virtual IEquatable<Post> Posts{ set; get; }
     }
 }

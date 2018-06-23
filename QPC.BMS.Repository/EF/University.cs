@@ -37,5 +37,8 @@ namespace QPC.BMS.Repository.EF
         public DateTime? DateUpdate { set; get; }
 
         public Boolean Status { set; get; }
+
+
+        public virtual IEquatable<Faculty> Faculties { set; get; }
     }
 }

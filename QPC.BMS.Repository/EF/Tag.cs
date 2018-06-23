@@ -5,6 +5,7 @@
 /// </summary>
 namespace QPC.BMS.Repository.EF
 {
+    using System;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
@@ -15,11 +16,13 @@ namespace QPC.BMS.Repository.EF
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
 
-        public int AccountID { set; get; }
-        public virtual Account Account { set; get; }
+        /// <summary>
+        /// Author tao ra tag nay.
+        /// </summary>
+        public int AuthorPostID { set; get; }
+        public virtual AuthorPost AuthorPost { set; get; }
 
         public string Name { set; get; }
-
 
         public string Permalink { set; get; }
 
@@ -31,8 +34,14 @@ namespace QPC.BMS.Repository.EF
 
         public string DateUpdate { set; get; }
 
+        /// <summary>
+        /// Tong so bai viet cua Tag nay
+        /// </summary>
         public int PostCount { set; get; }
 
         public string Status { set; get; }
+
+
+        public virtual IEquatable<RefPostWithTag> RefPostWithTags { set; get; }
     }
 }

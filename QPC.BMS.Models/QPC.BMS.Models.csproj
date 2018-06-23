@@ -53,39 +53,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs" />
-    <Compile Include="ApiAuthorize.cs" />
-    <Compile Include="AuditingLog.cs" />
-    <Compile Include="Authorization.cs" />
-    <Compile Include="AuthorPost.cs" />
-    <Compile Include="Comment.cs" />
-    <Compile Include="Country.cs" />
-    <Compile Include="District.cs" />
-    <Compile Include="Download.cs" />
-    <Compile Include="DownloadTracking.cs" />
-    <Compile Include="Faculty.cs" />
-    <Compile Include="Grader.cs" />
-    <Compile Include="Media.cs" />
-    <Compile Include="MediaType.cs" />
-    <Compile Include="Module.cs" />
-    <Compile Include="NavigationMenu.cs" />
-    <Compile Include="Post.cs" />
-    <Compile Include="PostType.cs" />
+    <Compile Include="AccountModel.cs" />
+    <Compile Include="ApiAuthorizeModel.cs" />
+    <Compile Include="AuditingLogModel.cs" />
+    <Compile Include="AuthorizationModel.cs" />
+    <Compile Include="AuthorPostModel.cs" />
+    <Compile Include="CommentModel.cs" />
+    <Compile Include="CountryModel.cs" />
+    <Compile Include="DistrictModel.cs" />
+    <Compile Include="DownloadModel.cs" />
+    <Compile Include="DownloadTrackingModel.cs" />
+    <Compile Include="FacultyModel.cs" />
+    <Compile Include="GraderModel.cs" />
+    <Compile Include="MediaModel.cs" />
+    <Compile Include="MediaTypeModel.cs" />
+    <Compile Include="ModuleModel.cs" />
+    <Compile Include="NavigationMenuModel.cs" />
+    <Compile Include="PostModel.cs" />
+    <Compile Include="PostTypeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Province.cs" />
-    <Compile Include="RefPostWithTag.cs" />
-    <Compile Include="Role.cs" />
-    <Compile Include="Series.cs" />
-    <Compile Include="Setting.cs" />
-    <Compile Include="SocialApi.cs" />
-    <Compile Include="SocialType.cs" />
-    <Compile Include="SystemExceptionLog.cs" />
-    <Compile Include="Tag.cs" />
-    <Compile Include="University.cs" />
+    <Compile Include="ProvinceModel.cs" />
+    <Compile Include="RefPostWithTagModel.cs" />
+    <Compile Include="RoleModel.cs" />
+    <Compile Include="SeriesModel.cs" />
+    <Compile Include="SettingModel.cs" />
+    <Compile Include="SocialApiModel.cs" />
+    <Compile Include="SocialTypeModel.cs" />
+    <Compile Include="SystemExceptionLogModel.cs" />
+    <Compile Include="TagModel.cs" />
+    <Compile Include="UniversityModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QPC.BMS.Helpers\QPC.BMS.Helpers.csproj">
+      <Project>{d87874d6-ec9f-43b1-bc4d-2fb7e7e4bf18}</Project>
+      <Name>QPC.BMS.Helpers</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

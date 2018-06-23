@@ -6,6 +6,7 @@
 namespace QPC.BMS.Repository.EF
 {
     using System;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
@@ -21,6 +22,10 @@ namespace QPC.BMS.Repository.EF
 
         public DateTime? DateCreate { set; get; }
 
+        /// <summary>
+        /// Mac dinh: API cua tai khan se bi vo hieu hoa
+        /// </summary>
+        [DefaultValue(false)]
         public Boolean? IsActive { set; get; }
 
         public string Apikey { set; get; }
@@ -28,11 +33,5 @@ namespace QPC.BMS.Repository.EF
         public string SecretKey { set; get; }
 
         public DateTime? DateModified { set; get; }
-
-        public string IsEnableUrl { set; get; }
-
-        public int AccountIDUpdate { set; get; }
-
-        public DateTime DateUpdate { set; get; }
     }
 }

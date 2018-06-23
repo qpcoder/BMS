@@ -93,6 +93,7 @@
     <Compile Include="EncryptHelpers\Base36HelperImp.cs" />
     <Compile Include="EncryptHelpers\IEncryptHelper.cs" />
     <Compile Include="Enum\AccountStatus.cs" />
+    <Compile Include="Enum\ActionName.cs" />
     <Compile Include="Enum\Gender.cs" />
     <Compile Include="Enum\MessageContants.cs" />
     <Compile Include="Enum\PostStatus.cs" />

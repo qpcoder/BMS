@@ -3,13 +3,13 @@
 /// <author> Nguyen Quy </author>
 /// <copyright> Copyright © 2018. All right reserver. </copyright
 /// </summary>
-namespace QPC.BMS.Repository.EF
+namespace QPC.BMS.Models
 {
     using System;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
-    public class University
+    public class UniversityModel
     {
         [Key]
         [Required]
@@ -21,7 +21,7 @@ namespace QPC.BMS.Repository.EF
         public string Address { set; get; }
 
         public int DistrictID { set; get; }
-        public virtual District District { set; get; }
+        public virtual DistrictModel District { set; get; }
 
         public string Fax { set; get; }
 
@@ -37,5 +37,8 @@ namespace QPC.BMS.Repository.EF
         public DateTime? DateUpdate { set; get; }
 
         public Boolean Status { set; get; }
+
+
+        public virtual IEquatable<FacultyModel> Faculties { set; get; }
     }
 }

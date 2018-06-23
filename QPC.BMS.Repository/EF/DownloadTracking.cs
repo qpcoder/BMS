@@ -19,11 +19,20 @@ namespace QPC.BMS.Repository.EF
         public int DownloadID { set; get; }
         public virtual Download Download { set; get; }
 
+        /// <summary>
+        /// Cho phep khach vang lai tai tai lieu. 
+        /// Neu la user cua he thong thi ghi nhan lai thong tin nguoi do.
+        /// </summary>
         public int AccountID { set; get; }
-        public virtual Account Account { set; get; }
 
+        /// <summary>
+        /// IP cua nguoi thuc hien tai tai lieu.
+        /// </summary>
         public string IPAddress { set; get; }
 
+        /// <summary>
+        /// Trinh duyet ma nguoi dung thuc hien hanh dong tai tai lieu.
+        /// </summary>
         public string WebBrower { set; get; }
 
         public DateTime? DateTracking { set; get; }

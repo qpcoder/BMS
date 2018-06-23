@@ -16,18 +16,27 @@ namespace QPC.BMS.Repository.EF
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
 
+        /// <summary>
+        /// ma vungf cua quoc gia nay
+        /// </summary>
         public int Code { set; get; }
 
+        /// <summary>
+        /// Ma ngon ngu cua quoc gia nay
+        /// </summary>
         public string Lang { set; get; }
 
         public string Name { set; get; }
 
         public string Description { set; get; }
 
-        public DateTime DateCreate { set; get; }
+        public DateTime? DateCreate { set; get; }
 
-        public DateTime DateUpdate { set; get; }
+        public DateTime? DateUpdate { set; get; }
 
         public Boolean Status { set; get; }
+
+
+        public IEquatable<Province> Provinces{ set; get; }
     }
 }

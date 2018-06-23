@@ -22,8 +22,11 @@ namespace QPC.BMS.Repository.EF
         
         public string Description { set; get; }
         
-        public DateTime DateCreate { set; get; }
+        public DateTime? DateCreate { set; get; }
         
         public Boolean Status { set; get; }
+
+
+        public virtual IEquatable<Authorization> Authorizations{ set; get; }
     }
 }
