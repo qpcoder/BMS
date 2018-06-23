@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="QPC.BMS.WebApi.MainServices" CodeBehind="MainServices.svc.cs" %>
