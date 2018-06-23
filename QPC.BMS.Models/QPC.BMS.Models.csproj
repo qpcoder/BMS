@@ -79,6 +79,7 @@
     <Compile Include="SettingModel.cs" />
     <Compile Include="SocialApiModel.cs" />
     <Compile Include="SocialTypeModel.cs" />
+    <Compile Include="StudentModel.cs" />
     <Compile Include="SystemExceptionLogModel.cs" />
     <Compile Include="TagModel.cs" />
     <Compile Include="UniversityModel.cs" />

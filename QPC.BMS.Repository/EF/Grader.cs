@@ -35,6 +35,6 @@ namespace QPC.BMS.Repository.EF
         public string Status { set; get; }
 
 
-        public virtual IEquatable<Account> Account{ set; get; }
+        public virtual IEquatable<Student> Students{ set; get; }
     }
 }

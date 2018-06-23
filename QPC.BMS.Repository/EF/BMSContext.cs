@@ -84,6 +84,7 @@ namespace QPC.BMS.Repository.EF
         public DbSet<SystemExceptionLog> SystemExceptionLogs { set; get; }
         public DbSet<Tag> Tags { set; get; }
         public DbSet<University> Universities { set; get; }
+        public DbSet<Student> Students { get; set; }
         #endregion
 
         /// <summary>

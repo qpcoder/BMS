@@ -19,8 +19,8 @@ namespace QPC.BMS.Models
         /// <summary>
         /// Author tao ra tag nay.
         /// </summary>
-        public int AuthorPostID { set; get; }
-        public virtual AuthorPostModel AuthorPost { set; get; }
+        public int AccountID { set; get; }
+        public virtual AccountModel Account { set; get; }
 
         public string Name { set; get; }
 

@@ -19,8 +19,8 @@ namespace QPC.BMS.Repository.EF
         /// <summary>
         /// Author tao ra tag nay.
         /// </summary>
-        public int AuthorPostID { set; get; }
-        public virtual AuthorPost AuthorPost { set; get; }
+        public int AccountID { set; get; }
+        public virtual Account Account { set; get; }
 
         public string Name { set; get; }
 

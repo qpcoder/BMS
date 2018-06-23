@@ -35,6 +35,6 @@ namespace QPC.BMS.Models
         public string Status { set; get; }
 
 
-        public virtual IEquatable<AccountModel> Account{ set; get; }
+        public virtual IEquatable<StudentModel> Students { set; get; }
     }
 }

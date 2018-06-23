@@ -18,7 +18,6 @@ namespace QPC.BMS.Models
         public int ID { set; get; }
 
         public int AccountID { set; get; }
-        public virtual AccountModel Account { set; get; }
 
         /// <summary>
         /// Cho phep author nay tao ra tag moi hay khong.
@@ -39,9 +38,6 @@ namespace QPC.BMS.Models
         public Boolean Status { set; get; }
 
 
-        public virtual IEquatable<TagModel> Tags{ set; get; }
-
-        public virtual IEquatable<SeriesModel> Series { set; get; }
 
         public virtual IEquatable<PostModel> Posts { set; get; }
     }

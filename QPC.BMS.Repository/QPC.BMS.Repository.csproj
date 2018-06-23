@@ -84,10 +84,16 @@
     <Compile Include="EF\Setting.cs" />
     <Compile Include="EF\SocialApi.cs" />
     <Compile Include="EF\SocialType.cs" />
+    <Compile Include="EF\Student.cs" />
     <Compile Include="EF\SystemExceptionLog.cs" />
     <Compile Include="EF\Tag.cs" />
     <Compile Include="EF\University.cs" />
     <Compile Include="Enum\MessageReponsitory.cs" />
+    <Compile Include="Migrations\201806230833116_BMS.cs" />
+    <Compile Include="Migrations\201806230833116_BMS.Designer.cs">
+      <DependentUpon>201806230833116_BMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +106,11 @@
     <None Include="App.config" />
     <None Include="EF\README.qp" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201806230833116_BMS.resx">
+      <DependentUpon>201806230833116_BMS.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
