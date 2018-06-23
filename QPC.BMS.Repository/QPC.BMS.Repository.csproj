@@ -58,7 +58,35 @@
   <ItemGroup>
     <Compile Include="DependencyResolution\IoC.cs" />
     <Compile Include="DependencyResolution\RepositoryRegistry.cs" />
+    <Compile Include="EF\Account.cs" />
+    <Compile Include="EF\ApiAuthorize.cs" />
+    <Compile Include="EF\AuditingLog.cs" />
+    <Compile Include="EF\Authorization.cs" />
+    <Compile Include="EF\AuthorPost.cs" />
     <Compile Include="EF\BMSContext.cs" />
+    <Compile Include="EF\Comment.cs" />
+    <Compile Include="EF\Country.cs" />
+    <Compile Include="EF\District.cs" />
+    <Compile Include="EF\Download.cs" />
+    <Compile Include="EF\DownloadTracking.cs" />
+    <Compile Include="EF\Faculty.cs" />
+    <Compile Include="EF\Grader.cs" />
+    <Compile Include="EF\Media.cs" />
+    <Compile Include="EF\MediaType.cs" />
+    <Compile Include="EF\Module.cs" />
+    <Compile Include="EF\NavigationMenu.cs" />
+    <Compile Include="EF\Post.cs" />
+    <Compile Include="EF\PostType.cs" />
+    <Compile Include="EF\Province.cs" />
+    <Compile Include="EF\RefPostWithTag.cs" />
+    <Compile Include="EF\Role.cs" />
+    <Compile Include="EF\Series.cs" />
+    <Compile Include="EF\Setting.cs" />
+    <Compile Include="EF\SocialApi.cs" />
+    <Compile Include="EF\SocialType.cs" />
+    <Compile Include="EF\SystemExceptionLog.cs" />
+    <Compile Include="EF\Tag.cs" />
+    <Compile Include="EF\University.cs" />
     <Compile Include="Enum\MessageReponsitory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
