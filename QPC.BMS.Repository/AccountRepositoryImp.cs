@@ -71,7 +71,7 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="accountID"></param>
         /// <returns></returns>
-        public bool DeleteAccount(Guid accountID)
+        public bool DeleteAccount(int accountID)
         {
             //log enter method
             logger.EnterMethod();
@@ -209,7 +209,7 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="accountID"></param>
         /// <returns></returns>
-        public Account GetAccount(Guid accountID)
+        public Account GetAccount(int accountID)
         {
             //log enter method
             logger.EnterMethod();

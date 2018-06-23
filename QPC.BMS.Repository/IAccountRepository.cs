@@ -31,7 +31,7 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="roleID">account id</param>
         /// <returns>object account</returns>
-        Account GetAccount(Guid accountID);
+        Account GetAccount(int accountID);
 
         /// <summary>
         /// Insert object into account
@@ -59,7 +59,7 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="accountID">account id</param>
         /// <returns>true or false</returns>
-        Boolean DeleteAccount(Guid accountID);
+        Boolean DeleteAccount(int accountID);
 
         /// <summary>
         /// Delete account by lamdar expression
