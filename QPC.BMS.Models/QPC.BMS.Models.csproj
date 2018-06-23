@@ -53,7 +53,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs" />
+    <Compile Include="ApiAuthorize.cs" />
+    <Compile Include="AuditingLog.cs" />
+    <Compile Include="Authorization.cs" />
+    <Compile Include="AuthorPost.cs" />
+    <Compile Include="Comment.cs" />
+    <Compile Include="Country.cs" />
+    <Compile Include="District.cs" />
+    <Compile Include="Download.cs" />
+    <Compile Include="DownloadTracking.cs" />
+    <Compile Include="Faculty.cs" />
+    <Compile Include="Grader.cs" />
+    <Compile Include="Media.cs" />
+    <Compile Include="MediaType.cs" />
+    <Compile Include="Module.cs" />
+    <Compile Include="NavigationMenu.cs" />
+    <Compile Include="Post.cs" />
+    <Compile Include="PostType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Province.cs" />
+    <Compile Include="RefPostWithTag.cs" />
+    <Compile Include="Role.cs" />
+    <Compile Include="Series.cs" />
+    <Compile Include="Setting.cs" />
+    <Compile Include="SocialApi.cs" />
+    <Compile Include="SocialType.cs" />
+    <Compile Include="SystemExceptionLog.cs" />
+    <Compile Include="Tag.cs" />
+    <Compile Include="University.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
