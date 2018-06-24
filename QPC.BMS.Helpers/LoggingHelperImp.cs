@@ -17,7 +17,8 @@ namespace QPC.BMS.Helpers
         /// <summary>
         /// Declare instance for log4net
         /// </summary>
-        private readonly ILog logger = LogManager.GetLogger("RollingLogFileAppender");
+        //private readonly ILog logger = LogManager.GetLogger("RollingLogFileAppender");
+        private readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         private StringBuilder stringBuilder;
 
