@@ -10,10 +10,16 @@ namespace QPC.BMS.Services
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using QPC.BMS.Models;
 
     public class SystemServicesImp : ISystemServices
     {
         public bool CreateDatabase()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool SetSystemExceptionLog(SystemExceptionLogModel logModel)
         {
             throw new NotImplementedException();
         }

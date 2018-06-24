@@ -29,6 +29,9 @@ namespace QPC.BMS.Repository
         /// </summary>
         private BMSContext db;
 
+        /// <summary>
+        /// Dependency Injection 
+        /// </summary>
         public AccountRepositoryImp()
         {
             logger = Helpers.DependencyResolution.IoC
@@ -98,9 +101,32 @@ namespace QPC.BMS.Repository
             }
         }
 
+        /// <summary>
+        /// Xoa phan quyen
+        /// Su dung lamdar expression
+        /// </summary>
+        /// <param name="expression"></param>
+        /// <returns></returns>
         public bool DeleteAuthorization(Func<Authorization, bool> expression)
         {
-            throw new NotImplementedException();
+            /// Log enter methods
+            logger.EnterMethod();
+
+            try
+            {
+                return true;
+            }
+            catch (Exception e)
+            {
+                logger.Warn(MessageReponsitory.DELETE_DATA_UNSUCCESSFUL);
+                logger.Debug($"{MessageReponsitory.DELETE_DATA_UNSUCCESSFUL} Message error: {e.Message} - StackTrace: {e.StackTrace.LastOrDefault()}");
+                throw new Exception($"{MessageReponsitory.DELETE_DATA_UNSUCCESSFUL} Message error: {e.Message} - StackTrace: {e.StackTrace.LastOrDefault()}");
+            }
+            finally
+            {
+                /// Log release method
+                logger.ReleaseMethod();
+            }
         }
 
         public bool DeleteAuthorization(int authorizationID)
@@ -506,6 +532,53 @@ namespace QPC.BMS.Repository
             finally
             {
                 //log release method
+                logger.ReleaseMethod();
+            }
+        }
+
+        /// <summary>
+        /// Them mot danh sach tai khoan
+        /// </summary>
+        /// <param name="models">Danh sach tai khoan</param>
+        /// <returns></returns>
+        public bool SetAccount(List<Account> models)
+        {
+            /// Log enter method
+            logger.EnterMethod();
+
+            /// Lay danh sach tai khoan trong he thong
+            List<Account> lstAccount = GetAllAccounts().ToList();
+            bool isNull = lstAccount.Count() == 0;
+
+            try
+            {
+                /// Lap tai khoan
+                /// Kiem tra xem trong bang account co tai khoan nao khong
+                /// Kien tra du lieu can nhap co ton tai trong CSDL chua bang cach ko trung email && username 
+                foreach (Account a in models)
+                {
+                    if (!isNull)
+                        if (lstAccount.Find(x => x.Email.ToLower().Equals(a.Email.ToLower())) == null
+                        && lstAccount.Find(x => x.UserName.ToLower().Equals(a.UserName.ToLower())) == null)
+                        {
+                            db.Accounts.Add(a);
+                        }
+                }
+
+                /// Luu cac thay doi vao trong database
+                db.SaveChanges();
+                logger.Info(MessageReponsitory.INSERT_DATA_SUCCESSFUL);
+                return true;
+            }
+            catch (Exception e)
+            {
+                logger.Warn(MessageReponsitory.INSERT_DATA_UNSUCCESSFUL);
+                logger.Debug(MessageReponsitory.INSERT_DATA_UNSUCCESSFUL + e.Message);
+                throw new Exception(MessageReponsitory.INSERT_DATA_UNSUCCESSFUL + e.Message);
+            }
+            finally
+            {
+                /// Log release method
                 logger.ReleaseMethod();
             }
         }

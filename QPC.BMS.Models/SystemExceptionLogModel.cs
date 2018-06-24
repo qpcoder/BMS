@@ -8,6 +8,7 @@ namespace QPC.BMS.Models
     using System;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Reflection;
 
     public class SystemExceptionLogModel
     {
@@ -42,5 +43,8 @@ namespace QPC.BMS.Models
         /// Duong dan URL luc do
         /// </summary>
         public string Url { set; get; }
+
+
+        public string TargetSite { get; set; }
     }
 }

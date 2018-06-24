@@ -531,6 +531,7 @@ namespace QPC.BMS.Repository.Migrations
                         StackTrace = c.String(),
                         Source = c.String(),
                         Url = c.String(),
+                        TargetSite = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             

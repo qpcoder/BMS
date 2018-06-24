@@ -25,6 +25,9 @@ namespace QPC.BMS.Repository
         /// </summary>
         BMSContext db;
 
+        /// <summary>
+        /// Dependency Injection 
+        /// </summary>
         public CommentRepositoryImp()
         {
             db = new BMSContext();

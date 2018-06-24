@@ -22,7 +22,7 @@ namespace QPC.BMS.Repository.EF
         /// <summary>
         /// 
         /// </summary>
-        public BMSContext():base("name=BMSContext")
+        public BMSContext() : base("name=BMSContext")
         {
             Database.SetInitializer<BMSContext>(new DropCreateDatabaseIfModelChanges<BMSContext>());
         }

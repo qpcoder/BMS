@@ -42,5 +42,7 @@ namespace QPC.BMS.Repository.EF
         /// Duong dan URL luc do
         /// </summary>
         public string Url { set; get; }
+
+        public string TargetSite { get; set; }
     }
 }

@@ -20,11 +20,11 @@ namespace QPC.BMS.Repository.Migrations
 
         protected override void Seed(BMSContext context)
         {
+            base.Seed(context);
+            
             ///  This method will be called after migrating to the latest version.
             ///  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             ///  to avoid creating duplicate seed data.
-
-            base.Seed(context);
         }
     }
 }

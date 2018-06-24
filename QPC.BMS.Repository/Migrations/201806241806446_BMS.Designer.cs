@@ -13,7 +13,7 @@ namespace QPC.BMS.Repository.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201806230833116_BMS"; }
+            get { return "201806241806446_BMS"; }
         }
         
         string IMigrationMetadata.Source

@@ -10,9 +10,12 @@ namespace QPC.BMS.Services
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using QPC.BMS.Models;
 
     public interface ISystemServices
     {
         bool CreateDatabase();
+
+        bool SetSystemExceptionLog(SystemExceptionLogModel logModel);
     }
 }

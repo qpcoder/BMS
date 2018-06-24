@@ -41,6 +41,13 @@ namespace QPC.BMS.Repository
         Boolean SetAccount(Account models);
 
         /// <summary>
+        /// Them mot danh sach tai khoan
+        /// </summary>
+        /// <param name="models">Danh sach tai khoan</param>
+        /// <returns></returns>
+        Boolean SetAccount(List<Account> models);
+
+        /// <summary>
         /// Update account by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
