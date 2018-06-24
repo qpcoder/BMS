@@ -118,7 +118,7 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="roleID">role id</param>
         /// <returns>true or false</returns>
-        Boolean DeleteRole(Guid roleID);
+        Boolean DeleteRole(int roleID);
 
         /// <summary>
         /// Delete role by lamdar expression
@@ -177,7 +177,7 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="moduleID">module id</param>
         /// <returns>true or false</returns>
-        Boolean DeleteModule(Guid moduleID);
+        Boolean DeleteModule(int moduleID);
 
         /// <summary>
         /// Delete module by lamdar expression
