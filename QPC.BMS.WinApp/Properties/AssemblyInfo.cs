@@ -7,11 +7,11 @@ using System.Windows;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("QPC.BMS.WinApp")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Nguyen Quy Blogger")]
+[assembly: AssemblyDescription("Ứng dụng quản lý website Nguyen Quy Blogger")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("QPC.BMS.WinApp")]
+[assembly: AssemblyCompany("Nguyen Quy Blogger")]
+[assembly: AssemblyProduct("BMS Tools")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

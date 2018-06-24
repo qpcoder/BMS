@@ -68,13 +68,6 @@ namespace QPC.BMS.Repository
         /// <returns>true or false</returns>
         Boolean DeleteAccount(Func<Account, bool> expression);
 
-        /// <summary>
-        /// Delete account forever
-        /// </summary>
-        /// <param name="expression"></param>
-        /// <returns></returns>
-        Boolean DeleteAccountForever(Func<Account, bool> expression);
-
         #endregion
 
         #region Table Role

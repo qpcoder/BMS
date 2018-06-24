@@ -98,30 +98,6 @@ namespace QPC.BMS.Repository
             }
         }
 
-        public bool DeleteAccountForever(Func<Account, bool> expression)
-        {
-            //log enter method
-            logger.EnterMethod();
-
-            //lay danh sach cac tai khoan can xoa
-
-            //lay ra danh sach series lien quan den tung tai khoan can xoa => thang bang tai khoan dufault
-
-            //lay ra cac luot download lien quan den tung tai khoan can xoa => thang bang tai khoan dufault
-
-            //lay ra danh sach cac hinh anh lien quan den ung tao => thang bang tai khoan dufault
-
-            //lay ra danh sach cac comment lien quan => thang bang tai khoan dufault
-
-            //lay ra danh sach cac bai viet lien quan => thang bang tai khoan dufault
-
-            //lay ra cac tag lien quan => thang bang tai khoan dufault
-
-            //log release method
-            logger.ReleaseMethod();
-            throw new NotImplementedException();
-        }
-
         public bool DeleteAllAuthorizations()
         {
             //log enter method
