@@ -11,11 +11,8 @@ namespace QPC.BMS.Services
     using System.Text;
     using System.Threading.Tasks;
 
-    public class SystemConfigurationServicesImp : ISystemConfigurationServices
+    public interface ISystemServices
     {
-        public bool CreateDatabase()
-        {
-            throw new NotImplementedException();
-        }
+        bool CreateDatabase();
     }
 }

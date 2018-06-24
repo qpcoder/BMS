@@ -24,21 +24,21 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>list posts</returns>
-        IEnumerable<Post> GetPostsByExpression(Func<Post, bool> expression);
+        IEnumerable<Post> GetPosts(Func<Post, bool> expression);
 
         /// <summary>
         /// Get post by id
         /// </summary>
         /// <param name="postID">post id</param>
         /// <returns>object post</returns>
-        Post GetPostByID(Guid postID);
+        Post GetPost(int postID);
 
         /// <summary>
         /// Insert list post into database
         /// </summary>
         /// <param name="models">list posts</param>
         /// <returns>true or false</returns>
-        Boolean SetListPosts(List<Post> models);
+        Boolean SetPost(List<Post> models);
 
         /// <summary>
         /// Insert object into post
@@ -52,34 +52,28 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean EditPostByExpression(Func<Post, bool> expression);
+        Boolean EditPost(Func<Post, bool> expression);
 
         /// <summary>
         /// Update post by object
         /// </summary>
         /// <param name="modelEdit">object edit</param>
         /// <returns>true or false</returns>
-        Boolean EditPostByObject(Post modelEdit);
+        Boolean EditPost(Post modelEdit);
 
         /// <summary>
         /// Delete post by ID
         /// </summary>
         /// <param name="postID">post id</param>
         /// <returns>true or false</returns>
-        Boolean DeletePostByID(Guid postID);
+        Boolean DeletePost(int postID);
 
         /// <summary>
         /// Delete post by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean DeletePostByExpression(Func<Post, bool> expression);
-
-        /// <summary>
-        /// Delete all posts
-        /// </summary>
-        /// <returns>true or false</returns>
-        Boolean DeleteAllPosts();
+        Boolean DeletePost(Func<Post, bool> expression);
 
         #endregion
 
@@ -96,21 +90,21 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>list tags</returns>
-        IEnumerable<Tag> GetTagsByExpression(Func<Tag, bool> expression);
+        IEnumerable<Tag> GetTag(Func<Tag, bool> expression);
 
         /// <summary>
         /// Get tag by id
         /// </summary>
         /// <param name="tagID">tag id</param>
         /// <returns>object tag</returns>
-        Tag GetTagByID(Guid tagID);
+        Tag GetTag(int tagID);
 
         /// <summary>
         /// Insert list tag into database
         /// </summary>
         /// <param name="models">list tags</param>
         /// <returns>true or false</returns>
-        Boolean SetListTags(List<Tag> models);
+        Boolean SetTag(List<Tag> models);
 
         /// <summary>
         /// Insert object into tag
@@ -124,34 +118,28 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean EditTagByExpression(Func<Tag, bool> expression);
+        Boolean EditTag(Func<Tag, bool> expression);
 
         /// <summary>
         /// Update tag by object
         /// </summary>
         /// <param name="modelEdit">object edit</param>
         /// <returns>true or false</returns>
-        Boolean EditTagByObject(Tag modelEdit);
+        Boolean EditTag(Tag modelEdit);
 
         /// <summary>
         /// Delete tag by ID
         /// </summary>
         /// <param name="tagID">tag id</param>
         /// <returns>true or false</returns>
-        Boolean DeleteTagByID(Guid tagID);
+        Boolean DeleteTag(int tagID);
 
         /// <summary>
         /// Delete tag by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean DeleteTagByExpression(Func<Tag, bool> expression);
-
-        /// <summary>
-        /// Delete all tags
-        /// </summary>
-        /// <returns>true or false</returns>
-        Boolean DeleteAllTags();
+        Boolean DeleteTag(Func<Tag, bool> expression);
 
         #endregion
 
@@ -168,21 +156,21 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>list series</returns>
-        IEnumerable<Series> GetSeriesByExpression(Func<Series, bool> expression);
+        IEnumerable<Series> GetSeries(Func<Series, bool> expression);
 
         /// <summary>
         /// Get series by id
         /// </summary>
         /// <param name="seriesID">series id</param>
         /// <returns>object series</returns>
-        Series GetSeriesByID(Guid seriesID);
+        Series GetSeries(int seriesID);
 
         /// <summary>
         /// Insert list series into database
         /// </summary>
         /// <param name="models">list series</param>
         /// <returns>true or false</returns>
-        Boolean SetListSeries(List<Series> models);
+        Boolean SetSeries(List<Series> models);
 
         /// <summary>
         /// Insert object into series
@@ -196,34 +184,28 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean EditSeriesByExpression(Func<Series, bool> expression);
+        Boolean EditSeries(Func<Series, bool> expression);
 
         /// <summary>
         /// Update series by object
         /// </summary>
         /// <param name="modelEdit">object edit</param>
         /// <returns>true or false</returns>
-        Boolean EditSeriesByObject(Series modelEdit);
+        Boolean EditSeries(Series modelEdit);
 
         /// <summary>
         /// Delete series by ID
         /// </summary>
         /// <param name="seriesID">series id</param>
         /// <returns>true or false</returns>
-        Boolean DeleteSeriesByID(Guid seriesID);
+        Boolean DeleteSeries(int seriesID);
 
         /// <summary>
         /// Delete series by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean DeleteSeriesByExpression(Func<Series, bool> expression);
-
-        /// <summary>
-        /// Delete all series
-        /// </summary>
-        /// <returns>true or false</returns>
-        Boolean DeleteAllSeries();
+        Boolean DeleteSeries(Func<Series, bool> expression);
 
         #endregion
 
@@ -240,21 +222,21 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>list tags</returns>
-        IEnumerable<RefPostWithTag> GetRefPostWithTagsByExpression(Func<RefPostWithTag, bool> expression);
+        IEnumerable<RefPostWithTag> GetRefPostWithTag(Func<RefPostWithTag, bool> expression);
 
         /// <summary>
         /// Get RefPostWithTag by id
         /// </summary>
         /// <param name="refPostWithTagID">tag id</param>
         /// <returns>object RefPostWithTag</returns>
-        RefPostWithTag GetRefPostWithTagByID(Guid refPostWithTagID);
+        RefPostWithTag GetRefPostWithTag(int refPostWithTagID);
 
         /// <summary>
         /// Insert list RefPostWithTag into database
         /// </summary>
         /// <param name="models">list RefPostWithTags</param>
         /// <returns>true or false</returns>
-        Boolean SetListRefPostWithTags(List<RefPostWithTag> models);
+        Boolean SetRefPostWithTag(List<RefPostWithTag> models);
 
         /// <summary>
         /// Insert object into RefPostWithTag
@@ -268,34 +250,28 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean EditRefPostWithTagByExpression(Func<RefPostWithTag, bool> expression);
+        Boolean EditRefPostWithTag(Func<RefPostWithTag, bool> expression);
 
         /// <summary>
         /// Update RefPostWithTag by object
         /// </summary>
         /// <param name="modelEdit">object edit</param>
         /// <returns>true or false</returns>
-        Boolean EditRefPostWithTagByObject(RefPostWithTag modelEdit);
+        Boolean EditRefPostWithTag(RefPostWithTag modelEdit);
 
         /// <summary>
         /// Delete RefPostWithTag by ID
         /// </summary>
         /// <param name="refPostWithTagID">RefPostWithTag id</param>
         /// <returns>true or false</returns>
-        Boolean DeleteRefPostWithTagByID(Guid refPostWithTagID);
+        Boolean DeleteRefPostWithTag(int refPostWithTagID);
 
         /// <summary>
         /// Delete RefPostWithTag by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean DeleteRefPostWithTagByExpression(Func<RefPostWithTag, bool> expression);
-
-        /// <summary>
-        /// Delete all RefPostWithTags
-        /// </summary>
-        /// <returns>true or false</returns>
-        Boolean DeleteAllRefPostWithTags();
+        Boolean DeleteRefPostWithTag(Func<RefPostWithTag, bool> expression);
 
         #endregion
 
@@ -312,21 +288,21 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>list PostTypes</returns>
-        IEnumerable<PostType> GetPostTypesByExpression(Func<PostType, bool> expression);
+        IEnumerable<PostType> GetPostTypes(Func<PostType, bool> expression);
 
         /// <summary>
         /// Get PostType by id
         /// </summary>
         /// <param name="postTypeID">PostType id</param>
         /// <returns>object PostType</returns>
-        PostType GetPostTypeByID(Guid postTypeID);
+        PostType GetPostType(int postTypeID);
 
         /// <summary>
         /// Insert list PostType into database
         /// </summary>
         /// <param name="models">list PostTypes</param>
         /// <returns>true or false</returns>
-        Boolean SetListPostTypes(List<PostType> models);
+        Boolean SetPostType(List<PostType> models);
 
         /// <summary>
         /// Insert object into PostType
@@ -340,106 +316,160 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean EditPostTypeByExpression(Func<PostType, bool> expression);
+        Boolean EditPostType(Func<PostType, bool> expression);
 
         /// <summary>
         /// Update PostType by object
         /// </summary>
         /// <param name="modelEdit">object edit</param>
         /// <returns>true or false</returns>
-        Boolean EditPostTypeByObject(PostType modelEdit);
+        Boolean EditPostType(PostType modelEdit);
 
         /// <summary>
         /// Delete PostType by ID
         /// </summary>
         /// <param name="postTypeID">PostType id</param>
         /// <returns>true or false</returns>
-        Boolean DeletePostTypeByID(Guid postTypeID);
+        Boolean DeletePostType(int postTypeID);
 
         /// <summary>
         /// Delete PostType by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean DeletePostTypeByExpression(Func<PostType, bool> expression);
-
-        /// <summary>
-        /// Delete all PostTypes
-        /// </summary>
-        /// <returns>true or false</returns>
-        Boolean DeleteAllPostTypes();
+        Boolean DeletePostType(Func<PostType, bool> expression);
 
         #endregion
 
         #region Table Media
 
         /// <summary>
-        /// Get all tags
+        /// Get all Media
         /// </summary>
-        /// <returns>list tags</returns>
-        IEnumerable<Media> GetAllImages();
+        /// <returns>list Media</returns>
+        IEnumerable<Media> GetAllMedias();
 
         /// <summary>
-        /// Get tag by lamdar expression
-        /// </summary>
-        /// <param name="expression">lamdar expression</param>
-        /// <returns>list tags</returns>
-        IEnumerable<Media> GetImagesByExpression(Func<Media, bool> expression);
-
-        /// <summary>
-        /// Get tag by id
-        /// </summary>
-        /// <param name="imageID">tag id</param>
-        /// <returns>object tag</returns>
-        Media GetImageByID(Guid imageID);
-
-        /// <summary>
-        /// Insert list tag into database
-        /// </summary>
-        /// <param name="models">list tags</param>
-        /// <returns>true or false</returns>
-        Boolean SetListImages(List<Media> models);
-
-        /// <summary>
-        /// Insert object into tag
-        /// </summary>
-        /// <param name="models">object tag</param>
-        /// <returns>true or false</returns>
-        Boolean SetImage(Media models);
-
-        /// <summary>
-        /// Update tag by lamdar expression
+        /// Get Media by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
-        /// <returns>true or false</returns>
-        Boolean EditImageByExpression(Func<Media, bool> expression);
+        /// <returns>list Media</returns>
+        IEnumerable<Media> GetMedia(Func<Media, bool> expression);
 
         /// <summary>
-        /// Update tag by object
+        /// Get Media by id
+        /// </summary>
+        /// <param name="imageID">Media id</param>
+        /// <returns>object Media</returns>
+        Media GetMedia(int imageID);
+
+        /// <summary>
+        /// Insert list Media into database
+        /// </summary>
+        /// <param name="models">list Media</param>
+        /// <returns>true or false</returns>
+        Boolean SetMedia(List<Media> models);
+
+        /// <summary>
+        /// Insert object into Media
+        /// </summary>
+        /// <param name="models">object Media</param>
+        /// <returns>true or false</returns>
+        Boolean SetMedia(Media models);
+
+        /// <summary>
+        /// Update Media by lamdar expression
+        /// </summary>
+        /// <param name="expression">lamdar expression</param>
+        /// <returns>true or false</returns>
+        Boolean EditMedia(Func<Media, bool> expression);
+
+        /// <summary>
+        /// Update Media by object
         /// </summary>
         /// <param name="modelEdit">object edit</param>
         /// <returns>true or false</returns>
-        Boolean EditImageByObject(Media modelEdit);
+        Boolean EditMedia(Media modelEdit);
 
         /// <summary>
-        /// Delete tag by ID
+        /// Delete Media by ID
         /// </summary>
-        /// <param name="imageID">tag id</param>
+        /// <param name="imageID">Media id</param>
         /// <returns>true or false</returns>
-        Boolean DeleteImageByID(Guid imageID);
+        Boolean DeleteMedia(int imageID);
 
         /// <summary>
-        /// Delete tag by lamdar expression
+        /// Delete Media by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean DeleteImageByExpression(Func<Media, bool> expression);
+        Boolean DeleteMedia(Func<Media, bool> expression);
+
+        #endregion
+
+        #region Table Media Type
 
         /// <summary>
-        /// Delete all tags
+        /// Get all Media Type
         /// </summary>
+        /// <returns>list Media Type</returns>
+        IEnumerable<MediaType> GetAllMediaTypes();
+
+        /// <summary>
+        /// Get Media Type by lamdar expression
+        /// </summary>
+        /// <param name="expression">lamdar expression</param>
+        /// <returns>list Media Type</returns>
+        IEnumerable<MediaType> GetMediaType(Func<MediaType, bool> expression);
+
+        /// <summary>
+        /// Get Media Type by id
+        /// </summary>
+        /// <param name="imageID">Media Type id</param>
+        /// <returns>object Media Type</returns>
+        MediaType GetMediaType(int imageID);
+
+        /// <summary>
+        /// Insert list Media Type into database
+        /// </summary>
+        /// <param name="models">list Media Type</param>
         /// <returns>true or false</returns>
-        Boolean DeleteAllImages();
+        Boolean SetMediaType(List<MediaType> models);
+
+        /// <summary>
+        /// Insert object into Media Type
+        /// </summary>
+        /// <param name="models">object tagMedia Typeparam>
+        /// <returns>true or false</returns>
+        Boolean SetMediaType(MediaType models);
+
+        /// <summary>
+        /// Update Media Type by lamdar expression
+        /// </summary>
+        /// <param name="expression">lamdar expression</param>
+        /// <returns>true or false</returns>
+        Boolean EditMediaType(Func<MediaType, bool> expression);
+
+        /// <summary>
+        /// Update Media Type by object
+        /// </summary>
+        /// <param name="modelEdit">object edit</param>
+        /// <returns>true or false</returns>
+        Boolean EditMediaType(MediaType modelEdit);
+
+        /// <summary>
+        /// Delete Media Type by ID
+        /// </summary>
+        /// <param name="imageID">Media Type id</param>
+        /// <returns>true or false</returns>
+        Boolean DeleteMediaType(int imageID);
+
+        /// <summary>
+        /// Delete Media Type by lamdar expression
+        /// </summary>
+        /// <param name="expression">lamdar expression</param>
+        /// <returns>true or false</returns>
+        Boolean DeleteMediaType(Func<MediaType, bool> expression);
 
         #endregion
 

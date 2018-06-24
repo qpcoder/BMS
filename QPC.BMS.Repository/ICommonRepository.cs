@@ -24,14 +24,14 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>list countries</returns>
-        IEnumerable<Country> GetCountriesByExpression(Func<Country, bool> expression);
+        IEnumerable<Country> GetCountry(Func<Country, bool> expression);
 
         /// <summary>
         /// Get country by ID
         /// </summary>
         /// <param name="countryID">country id</param>
         /// <returns>object country</returns>
-        Country GetCountryByID(Guid countryID);
+        Country GetCountry(int countryID);
 
         /// <summary>
         /// Insert objcet into database
@@ -45,41 +45,35 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="models">list object</param>
         /// <returns>true or false</returns>
-        Boolean SetListCountries(List<Country> models);
+        Boolean SetCountry(List<Country> models);
 
         /// <summary>
         /// Update country by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean EditCountryByExpression(Func<Country, bool> expression);
+        Boolean EditCountry(Func<Country, bool> expression);
 
         /// <summary>
         /// Update country by object
         /// </summary>
         /// <param name="modelEdit">object edit</param>
         /// <returns>true or false</returns>
-        Boolean EditCountryByObject(Country modelEdit);
+        Boolean EditCountry(Country modelEdit);
 
         /// <summary>
         /// Delete country by ID
         /// </summary>
         /// <param name="countryID">country id</param>
         /// <returns>true or false</returns>
-        Boolean DeleteCountryByID(Guid countryID);
+        Boolean DeleteCountry(int countryID);
 
         /// <summary>
         /// Delete country by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean DeleteCountryByExpression(Func<Country, bool> expression);
-
-        /// <summary>
-        /// Delete all countries
-        /// </summary>
-        /// <returns>true or false</returns>
-        Boolean DeleteAllCountries();
+        Boolean DeleteCountry(Func<Country, bool> expression);
 
         #endregion
 
@@ -96,14 +90,14 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>list provinces</returns>
-        IEnumerable<Province> GetProvincesByExpression(Func<Province, bool> expression);
+        IEnumerable<Province> GetProvinces(Func<Province, bool> expression);
 
         /// <summary>
         /// Get province by ID
         /// </summary>
         /// <param name="provinceID">province id</param>
         /// <returns>object province</returns>
-        Province GetProvinceByID(Guid provinceID);
+        Province GetProvince(int provinceID);
 
         /// <summary>
         /// Insert objcet into database
@@ -117,41 +111,35 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="models">list object</param>
         /// <returns>true or false</returns>
-        Boolean SetListProvinces(List<Province> models);
+        Boolean SetProvince(List<Province> models);
 
         /// <summary>
         /// Update province by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean EditProvinceByExpression(Func<Province, bool> expression);
+        Boolean EditProvince(Func<Province, bool> expression);
 
         /// <summary>
         /// Update province by object
         /// </summary>
         /// <param name="modelEdit">object edit</param>
         /// <returns>true or false</returns>
-        Boolean EditProvinceByObject(Province modelEdit);
+        Boolean EditProvince(Province modelEdit);
 
         /// <summary>
         /// Delete province by ID
         /// </summary>
         /// <param name="provinceID">province id</param>
         /// <returns>true or false</returns>
-        Boolean DeleteProvinceByID(Guid provinceID);
+        Boolean DeleteProvince(Guid provinceID);
 
         /// <summary>
         /// Delete province by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean DeleteProvinceByExpression(Func<Province, bool> expression);
-
-        /// <summary>
-        /// Delete all provinces
-        /// </summary>
-        /// <returns>true or false</returns>
-        Boolean DeleteAllProvinces();
+        Boolean DeleteProvince(Func<Province, bool> expression);
 
         #endregion
 
@@ -168,14 +156,14 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>list districts</returns>
-        IEnumerable<District> GetDistrictsByExpression(Func<District, bool> expression);
+        IEnumerable<District> GetDistrict(Func<District, bool> expression);
 
         /// <summary>
         /// Get district by ID
         /// </summary>
         /// <param name="districtID">district id</param>
         /// <returns>object district</returns>
-        District GetDistrictByID(Guid districtID);
+        District GetDistrict(int districtID);
 
         /// <summary>
         /// Insert objcet into database
@@ -189,41 +177,35 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="models">list object</param>
         /// <returns>true or false</returns>
-        Boolean SetListDistricts(List<District> models);
+        Boolean SetDistrict(List<District> models);
 
         /// <summary>
         /// Update district by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean EditDistrictByExpression(Func<District, bool> expression);
+        Boolean EditDistrict(Func<District, bool> expression);
 
         /// <summary>
         /// Update district by object
         /// </summary>
         /// <param name="modelEdit">object edit</param>
         /// <returns>true or false</returns>
-        Boolean EditDistrictByObject(District modelEdit);
+        Boolean EditDistrict(District modelEdit);
 
         /// <summary>
         /// Delete district by ID
         /// </summary>
         /// <param name="districtID">district id</param>
         /// <returns>true or false</returns>
-        Boolean DeleteDistrictByID(Guid districtID);
+        Boolean DeleteDistrict(Guid districtID);
 
         /// <summary>
         /// Delete district by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean DeleteDistrictByExpression(Func<District, bool> expression);
-
-        /// <summary>
-        /// Delete all districts
-        /// </summary>
-        /// <returns>true or false</returns>
-        Boolean DeleteAllDistricts();
+        Boolean DeleteDistrict(Func<District, bool> expression);
 
         #endregion
 
@@ -240,14 +222,14 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>list universities</returns>
-        IEnumerable<University> GetUniversitiesByExpression(Func<University, bool> expression);
+        IEnumerable<University> GetUniversity(Func<University, bool> expression);
 
         /// <summary>
         /// Get university by ID
         /// </summary>
         /// <param name="universityID">university id</param>
         /// <returns>object university</returns>
-        University GetUniversityByID(Guid universityID);
+        University GetUniversity(int universityID);
 
         /// <summary>
         /// Insert objcet into database
@@ -261,41 +243,35 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="models">list object</param>
         /// <returns>true or false</returns>
-        Boolean SetListUniversities(List<University> models);
+        Boolean SetUniversity(List<University> models);
 
         /// <summary>
         /// Update university by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean EditUniversityByExpression(Func<University, bool> expression);
+        Boolean EditUniversity(Func<University, bool> expression);
 
         /// <summary>
         /// Update university by object
         /// </summary>
         /// <param name="modelEdit">object edit</param>
         /// <returns>true or false</returns>
-        Boolean EditUniversityByObject(University modelEdit);
+        Boolean EditUniversity(University modelEdit);
 
         /// <summary>
         /// Delete university by ID
         /// </summary>
         /// <param name="universityID">university id</param>
         /// <returns>true or false</returns>
-        Boolean DeleteUniversityByID(Guid universityID);
+        Boolean DeleteUniversity(Guid universityID);
 
         /// <summary>
         /// Delete university by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean DeleteUniversityByExpression(Func<University, bool> expression);
-
-        /// <summary>
-        /// Delete all universities
-        /// </summary>
-        /// <returns>true or false</returns>
-        Boolean DeleteAllUniversities();
+        Boolean DeleteUniversity(Func<University, bool> expression);
 
         #endregion
 
@@ -312,14 +288,14 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>list faculties</returns>
-        IEnumerable<Faculty> GetFacultiesByExpression(Func<Faculty, bool> expression);
+        IEnumerable<Faculty> GetFaculty(Func<Faculty, bool> expression);
 
         /// <summary>
         /// Get faculty by ID
         /// </summary>
         /// <param name="facultyID">faculty id</param>
         /// <returns>object faculty</returns>
-        Faculty GetFacultyByID(Guid facultyID);
+        Faculty GetFaculty(int facultyID);
 
         /// <summary>
         /// Insert objcet into database
@@ -333,41 +309,35 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="models">list object</param>
         /// <returns>true or false</returns>
-        Boolean SetListFaculties(List<Faculty> models);
+        Boolean SetListFaculty(List<Faculty> models);
 
         /// <summary>
         /// Update faculty by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean EditFacultyByExpression(Func<Faculty, bool> expression);
+        Boolean EditFaculty(Func<Faculty, bool> expression);
 
         /// <summary>
         /// Update faculty by object
         /// </summary>
         /// <param name="modelEdit">object edit</param>
         /// <returns>true or false</returns>
-        Boolean EditFacultyByObject(Faculty modelEdit);
+        Boolean EditFaculty(Faculty modelEdit);
 
         /// <summary>
         /// Delete faculty by ID
         /// </summary>
         /// <param name="facultyID">faculty id</param>
         /// <returns>true or false</returns>
-        Boolean DeleteFacultyByID(Guid facultyID);
+        Boolean DeleteFaculty(int facultyID);
 
         /// <summary>
         /// Delete faculty by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean DeleteFacultyByExpression(Func<Faculty, bool> expression);
-
-        /// <summary>
-        /// Delete all faculties
-        /// </summary>
-        /// <returns>true or false</returns>
-        Boolean DeleteAllFaculties();
+        Boolean DeleteFaculty(Func<Faculty, bool> expression);
 
         #endregion
 
@@ -384,14 +354,14 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>list graders</returns>
-        IEnumerable<Grader> GetGradersByExpression(Func<Grader, bool> expression);
+        IEnumerable<Grader> GetGrader(Func<Grader, bool> expression);
 
         /// <summary>
         /// Get grader by ID
         /// </summary>
         /// <param name="graderID">grader id</param>
         /// <returns>object grader</returns>
-        Grader GetGraderByID(Guid graderID);
+        Grader GetGrader(int graderID);
 
         /// <summary>
         /// Insert objcet into database
@@ -405,41 +375,35 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="models">list object</param>
         /// <returns>true or false</returns>
-        Boolean SetListGraders(List<Grader> models);
+        Boolean SetGrader(List<Grader> models);
 
         /// <summary>
         /// Update grader by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean EditGraderByExpression(Func<Grader, bool> expression);
+        Boolean EditGrader(Func<Grader, bool> expression);
 
         /// <summary>
         /// Update grader by object
         /// </summary>
         /// <param name="modelEdit">object edit</param>
         /// <returns>true or false</returns>
-        Boolean EditGraderByObject(Grader modelEdit);
+        Boolean EditGrader(Grader modelEdit);
 
         /// <summary>
         /// Delete grader by ID
         /// </summary>
         /// <param name="graderID">grader id</param>
         /// <returns>true or false</returns>
-        Boolean DeleteGraderByID(Guid graderID);
+        Boolean DeleteGrader(Guid graderID);
 
         /// <summary>
         /// Delete grader by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
-        Boolean DeleteGraderByExpression(Func<Grader, bool> expression);
-
-        /// <summary>
-        /// Delete all graders
-        /// </summary>
-        /// <returns>true or false</returns>
-        Boolean DeleteAllGraders();
+        Boolean DeleteGrader(Func<Grader, bool> expression);
 
         #endregion
 

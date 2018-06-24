@@ -16,160 +16,166 @@ namespace QPC.BMS.Repository
         /// <summary>
         /// Handle instance for log4net
         /// </summary>
-        public readonly ILoggingHelper logger =
-            QPC.BMS.Helpers.DependencyResolution.IoC.Container().GetInstance<ILoggingHelper>(TargetImplement.V1.ToString());
+        public readonly ILoggingHelper logger;
 
-        public bool DeleteAllImages()
+        /// <summary>
+        /// Handle instance for connect database 
+        /// </summary>
+        private BMSContext db;
+
+        public PostRepositoryImp()
+        {
+            logger = Helpers.DependencyResolution.IoC.Container().GetInstance<ILoggingHelper>(TargetImplement.V1.ToString());
+
+            db = new BMSContext();
+        }
+
+        public bool DeleteMedia(int imageID)
         {
             throw new NotImplementedException();
         }
 
-        public bool DeleteAllPosts()
+        public bool DeleteMedia(Func<Media, bool> expression)
         {
             throw new NotImplementedException();
         }
 
-        public bool DeleteAllPostTypes()
+        public bool DeleteMediaType(int imageID)
         {
             throw new NotImplementedException();
         }
 
-        public bool DeleteAllRefPostWithTags()
+        public bool DeleteMediaType(Func<MediaType, bool> expression)
         {
             throw new NotImplementedException();
         }
 
-        public bool DeleteAllSeries()
+        public bool DeletePost(int postID)
         {
             throw new NotImplementedException();
         }
 
-        public bool DeleteAllTags()
+        public bool DeletePost(Func<Post, bool> expression)
         {
             throw new NotImplementedException();
         }
 
-        public bool DeleteImageByExpression(Func<Media, bool> expression)
+        public bool DeletePostType(int postTypeID)
         {
             throw new NotImplementedException();
         }
 
-        public bool DeleteImageByID(Guid imageID)
+        public bool DeletePostType(Func<PostType, bool> expression)
         {
             throw new NotImplementedException();
         }
 
-        public bool DeletePostByExpression(Func<Post, bool> expression)
+        public bool DeleteRefPostWithTag(int refPostWithTagID)
         {
             throw new NotImplementedException();
         }
 
-        public bool DeletePostByID(Guid postID)
+        public bool DeleteRefPostWithTag(Func<RefPostWithTag, bool> expression)
         {
             throw new NotImplementedException();
         }
 
-        public bool DeletePostTypeByExpression(Func<PostType, bool> expression)
+        public bool DeleteSeries(int seriesID)
         {
             throw new NotImplementedException();
         }
 
-        public bool DeletePostTypeByID(Guid postTypeID)
+        public bool DeleteSeries(Func<Series, bool> expression)
         {
             throw new NotImplementedException();
         }
 
-        public bool DeleteRefPostWithTagByExpression(Func<RefPostWithTag, bool> expression)
+        public bool DeleteTag(int tagID)
         {
             throw new NotImplementedException();
         }
 
-        public bool DeleteRefPostWithTagByID(Guid refPostWithTagID)
+        public bool DeleteTag(Func<Tag, bool> expression)
         {
             throw new NotImplementedException();
         }
 
-        public bool DeleteSeriesByExpression(Func<Series, bool> expression)
+        public bool EditMedia(Func<Media, bool> expression)
         {
             throw new NotImplementedException();
         }
 
-        public bool DeleteSeriesByID(Guid seriesID)
+        public bool EditMedia(Media modelEdit)
         {
             throw new NotImplementedException();
         }
 
-        public bool DeleteTagByExpression(Func<Tag, bool> expression)
+        public bool EditMediaType(Func<MediaType, bool> expression)
         {
             throw new NotImplementedException();
         }
 
-        public bool DeleteTagByID(Guid tagID)
+        public bool EditMediaType(MediaType modelEdit)
         {
             throw new NotImplementedException();
         }
 
-        public bool EditImageByExpression(Func<Media, bool> expression)
+        public bool EditPost(Func<Post, bool> expression)
         {
             throw new NotImplementedException();
         }
 
-        public bool EditImageByObject(Media modelEdit)
+        public bool EditPost(Post modelEdit)
         {
             throw new NotImplementedException();
         }
 
-        public bool EditPostByExpression(Func<Post, bool> expression)
+        public bool EditPostType(Func<PostType, bool> expression)
         {
             throw new NotImplementedException();
         }
 
-        public bool EditPostByObject(Post modelEdit)
+        public bool EditPostType(PostType modelEdit)
         {
             throw new NotImplementedException();
         }
 
-        public bool EditPostTypeByExpression(Func<PostType, bool> expression)
+        public bool EditRefPostWithTag(Func<RefPostWithTag, bool> expression)
         {
             throw new NotImplementedException();
         }
 
-        public bool EditPostTypeByObject(PostType modelEdit)
+        public bool EditRefPostWithTag(RefPostWithTag modelEdit)
         {
             throw new NotImplementedException();
         }
 
-        public bool EditRefPostWithTagByExpression(Func<RefPostWithTag, bool> expression)
+        public bool EditSeries(Func<Series, bool> expression)
         {
             throw new NotImplementedException();
         }
 
-        public bool EditRefPostWithTagByObject(RefPostWithTag modelEdit)
+        public bool EditSeries(Series modelEdit)
         {
             throw new NotImplementedException();
         }
 
-        public bool EditSeriesByExpression(Func<Series, bool> expression)
+        public bool EditTag(Func<Tag, bool> expression)
         {
             throw new NotImplementedException();
         }
 
-        public bool EditSeriesByObject(Series modelEdit)
+        public bool EditTag(Tag modelEdit)
         {
             throw new NotImplementedException();
         }
 
-        public bool EditTagByExpression(Func<Tag, bool> expression)
+        public IEnumerable<Media> GetAllMedias()
         {
             throw new NotImplementedException();
         }
 
-        public bool EditTagByObject(Tag modelEdit)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Media> GetAllImages()
+        public IEnumerable<MediaType> GetAllMediaTypes()
         {
             throw new NotImplementedException();
         }
@@ -199,97 +205,97 @@ namespace QPC.BMS.Repository
             throw new NotImplementedException();
         }
 
-        public Media GetImageByID(Guid imageID)
+        public IEnumerable<Media> GetMedia(Func<Media, bool> expression)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Media> GetImagesByExpression(Func<Media, bool> expression)
+        public Media GetMedia(int imageID)
         {
             throw new NotImplementedException();
         }
 
-        public Post GetPostByID(Guid postID)
+        public IEnumerable<MediaType> GetMediaType(Func<MediaType, bool> expression)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Post> GetPostsByExpression(Func<Post, bool> expression)
+        public MediaType GetMediaType(int imageID)
         {
             throw new NotImplementedException();
         }
 
-        public PostType GetPostTypeByID(Guid postTypeID)
+        public Post GetPost(int postID)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<PostType> GetPostTypesByExpression(Func<PostType, bool> expression)
+        public IEnumerable<Post> GetPosts(Func<Post, bool> expression)
         {
             throw new NotImplementedException();
         }
 
-        public RefPostWithTag GetRefPostWithTagByID(Guid refPostWithTagID)
+        public PostType GetPostType(int postTypeID)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<RefPostWithTag> GetRefPostWithTagsByExpression(Func<RefPostWithTag, bool> expression)
+        public IEnumerable<PostType> GetPostTypes(Func<PostType, bool> expression)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Series> GetSeriesByExpression(Func<Series, bool> expression)
+        public IEnumerable<RefPostWithTag> GetRefPostWithTag(Func<RefPostWithTag, bool> expression)
         {
             throw new NotImplementedException();
         }
 
-        public Series GetSeriesByID(Guid seriesID)
+        public RefPostWithTag GetRefPostWithTag(int refPostWithTagID)
         {
             throw new NotImplementedException();
         }
 
-        public Tag GetTagByID(Guid tagID)
+        public IEnumerable<Series> GetSeries(Func<Series, bool> expression)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Tag> GetTagsByExpression(Func<Tag, bool> expression)
+        public Series GetSeries(int seriesID)
         {
             throw new NotImplementedException();
         }
 
-        public bool SetImage(Media models)
+        public IEnumerable<Tag> GetTag(Func<Tag, bool> expression)
         {
             throw new NotImplementedException();
         }
 
-        public bool SetListImages(List<Media> models)
+        public Tag GetTag(int tagID)
         {
             throw new NotImplementedException();
         }
 
-        public bool SetListPosts(List<Post> models)
+        public bool SetMedia(List<Media> models)
         {
             throw new NotImplementedException();
         }
 
-        public bool SetListPostTypes(List<PostType> models)
+        public bool SetMedia(Media models)
         {
             throw new NotImplementedException();
         }
 
-        public bool SetListRefPostWithTags(List<RefPostWithTag> models)
+        public bool SetMediaType(List<MediaType> models)
         {
             throw new NotImplementedException();
         }
 
-        public bool SetListSeries(List<Series> models)
+        public bool SetMediaType(MediaType models)
         {
             throw new NotImplementedException();
         }
 
-        public bool SetListTags(List<Tag> models)
+        public bool SetPost(List<Post> models)
         {
             throw new NotImplementedException();
         }
@@ -299,7 +305,17 @@ namespace QPC.BMS.Repository
             throw new NotImplementedException();
         }
 
+        public bool SetPostType(List<PostType> models)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool SetPostType(PostType models)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool SetRefPostWithTag(List<RefPostWithTag> models)
         {
             throw new NotImplementedException();
         }
@@ -309,7 +325,17 @@ namespace QPC.BMS.Repository
             throw new NotImplementedException();
         }
 
+        public bool SetSeries(List<Series> models)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool SetSeries(Series models)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool SetTag(List<Tag> models)
         {
             throw new NotImplementedException();
         }

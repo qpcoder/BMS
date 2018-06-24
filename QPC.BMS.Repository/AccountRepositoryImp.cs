@@ -98,24 +98,12 @@ namespace QPC.BMS.Repository
             }
         }
 
-        public bool DeleteAllAuthorizations()
-        {
-            //log enter method
-            logger.EnterMethod();
-
-            //delete all Authorizations
-
-            //log releae method
-            logger.ReleaseMethod();
-            throw new NotImplementedException("need to develop");
-        }
-
         public bool DeleteAuthorization(Func<Authorization, bool> expression)
         {
             throw new NotImplementedException();
         }
 
-        public bool DeleteAuthorization(Guid authorizationID)
+        public bool DeleteAuthorization(int authorizationID)
         {
             throw new NotImplementedException();
         }
@@ -125,7 +113,7 @@ namespace QPC.BMS.Repository
             throw new NotImplementedException();
         }
 
-        public bool DeleteModule(Guid moduleID)
+        public bool DeleteModule(int moduleID)
         {
             throw new NotImplementedException();
         }
@@ -135,7 +123,7 @@ namespace QPC.BMS.Repository
             throw new NotImplementedException();
         }
 
-        public bool DeleteRole(Guid roleID)
+        public bool DeleteRole(int roleID)
         {
             throw new NotImplementedException();
         }
@@ -333,7 +321,7 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="authorizationID"></param>
         /// <returns></returns>
-        public Authorization GetAuthorization(Guid authorizationID)
+        public Authorization GetAuthorization(int authorizationID)
         {
             //log enter method
             logger.EnterMethod();

@@ -18,21 +18,21 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="postID"></param>
         /// <returns></returns>
-        IEnumerable<Comment> GetAllComments(Guid postID);
+        IEnumerable<Comment> GetAllComments(int postID);
 
         /// <summary>
         /// Get comment by lamdar expression
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>list comments</returns>
-        IEnumerable<Comment> GetComments(Func<Comment, bool> expression);
+        IEnumerable<Comment> GetComment(Func<Comment, bool> expression);
 
         /// <summary>
         /// Get comment by id
         /// </summary>
         /// <param name="commentID">comment id</param>
         /// <returns>object comment</returns>
-        Comment GetComment(Guid commentID, Guid postID);
+        Comment GetComment(int commentID, int postID);
 
         /// <summary>
         /// Insert list comment into database
@@ -67,7 +67,7 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="logID">comment id</param>
         /// <returns>true or false</returns>
-        Boolean DeleteComment(Guid commentID);
+        Boolean DeleteComment(int commentID);
 
         /// <summary>
         /// Delete comment by lamdar expression

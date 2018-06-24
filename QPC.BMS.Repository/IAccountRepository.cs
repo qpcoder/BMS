@@ -208,7 +208,7 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="authorizationID">authorization id</param>
         /// <returns>object authorization</returns>
-        Authorization GetAuthorization(Guid authorizationID);
+        Authorization GetAuthorization(int authorizationID);
 
         /// <summary>
         /// Insert object into authorization
@@ -236,7 +236,7 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="authorizationID">authorization id</param>
         /// <returns>true or false</returns>
-        Boolean DeleteAuthorization(Guid authorizationID);
+        Boolean DeleteAuthorization(int authorizationID);
 
         /// <summary>
         /// Delete authorization by lamdar expression
@@ -244,12 +244,6 @@ namespace QPC.BMS.Repository
         /// <param name="expression">lamdar expression</param>
         /// <returns>true or false</returns>
         Boolean DeleteAuthorization(Func<Authorization, bool> expression);
-
-        /// <summary>
-        /// Delete all authorizations
-        /// </summary>
-        /// <returns>true or false</returns>
-        Boolean DeleteAllAuthorizations();
 
         #endregion
     }

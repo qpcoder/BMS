@@ -77,7 +77,7 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="commentID"></param>
         /// <returns></returns>
-        public bool DeleteComment(Guid commentID)
+        public bool DeleteComment(int commentID)
         {
             //log enter method
             logger.EnterMethod();
@@ -182,7 +182,7 @@ namespace QPC.BMS.Repository
         /// Lay tat ca comment 
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<Comment> GetAllComments(Guid postID)
+        public IEnumerable<Comment> GetAllComments(int postID)
         {
             //log enter method
             logger.EnterMethod();
@@ -215,7 +215,7 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="commentID"></param>
         /// <returns></returns>
-        public Comment GetComment(Guid commentID, Guid postID)
+        public Comment GetComment(int commentID, int postID)
         {
             //log enter method
             logger.EnterMethod();
@@ -248,7 +248,7 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression"></param>
         /// <returns></returns>
-        public IEnumerable<Comment> GetComments(Func<Comment, bool> expression)
+        public IEnumerable<Comment> GetComment(Func<Comment, bool> expression)
         {
             //log enter method
             logger.EnterMethod();
