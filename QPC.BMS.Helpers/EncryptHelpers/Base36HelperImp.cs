@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace QPC.BMS.Helpers
 {
-    public partial class Base36HelperImp : IEncryptHelper
+    public partial class Base36HelperImp : BaseHelper, IEncryptHelper
     {
 
         private const string Digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";

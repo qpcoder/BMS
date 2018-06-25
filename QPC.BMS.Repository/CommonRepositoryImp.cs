@@ -11,25 +11,8 @@ namespace QPC.BMS.Repository
     using System;
     using System.Collections.Generic;
 
-    class CommonRepositoryImp : ICommonRepository
+    class CommonRepositoryImp : BaseRepository, ICommonRepository
     {
-        /// <summary>
-        /// Handle instance for log4net
-        /// </summary>
-        private readonly ILoggingHelper logger;
-
-        /// <summary>
-        /// Handle instance for Connection database 
-        /// </summary>
-        private BMSContext db;
-
-        public CommonRepositoryImp()
-        {
-            logger = Helpers.DependencyResolution.IoC.Container().GetInstance<ILoggingHelper>(TargetImplement.V1.ToString());
-
-            db = new BMSContext();
-        }
-
         public bool DeleteCountry(int countryID)
         {
             throw new NotImplementedException();

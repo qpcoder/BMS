@@ -10,7 +10,7 @@ using System.Text;
 using System.Web;
 namespace QPC.BMS.Helpers
 {
-    public class NetworkHelper
+    public class NetworkHelper : BaseHelper
     {
         /// <summary>
         /// Gui request dang post

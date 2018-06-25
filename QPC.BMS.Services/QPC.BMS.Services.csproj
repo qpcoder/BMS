@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountServicesImp.cs" />
+    <Compile Include="BaseServices.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
     <Compile Include="DependencyResolution\ServicesRegistry.cs" />
     <Compile Include="IAccountServices.cs" />

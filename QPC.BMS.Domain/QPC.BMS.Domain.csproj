@@ -64,7 +64,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoMapper\AccountMapping.cs" />
+    <Compile Include="BaseDomain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SMSProcessing\EsmsProcessing.cs" />
     <Compile Include="SMSProcessing\SMSTypeEnum.cs" />
     <Compile Include="SMSProcessing\SpeedSMSHelper.cs" />
   </ItemGroup>

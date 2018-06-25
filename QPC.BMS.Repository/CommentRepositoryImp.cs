@@ -13,27 +13,8 @@ namespace QPC.BMS.Repository
     using QPC.BMS.Repository.EF;
     using QPC.BMS.Repository.Enum;
 
-    class CommentRepositoryImp : ICommentRepository
+    class CommentRepositoryImp : BaseRepository, ICommentRepository
     {
-        /// <summary>
-        /// Handle instance for log4net
-        /// </summary>
-        public readonly ILoggingHelper logger;
-
-        /// <summary>
-        /// Handle instance connect to database
-        /// </summary>
-        BMSContext db;
-
-        /// <summary>
-        /// Dependency Injection 
-        /// </summary>
-        public CommentRepositoryImp()
-        {
-            db = new BMSContext();
-            logger = Helpers.DependencyResolution.IoC.Container().GetInstance<ILoggingHelper>(TargetImplement.V1.ToString());
-        }
-
         /// <summary>
         /// Xoa comment su dung lamdar expression
         /// </summary>
@@ -293,8 +274,12 @@ namespace QPC.BMS.Repository
             {
                 if (db.Accounts.Where(x => x.ID.Equals(model.AccountID)).FirstOrDefault() == null)
                     throw new Exception(MessageReponsitory.ACCOUNT_NOT_EXISTS);
+
+                db.Comments.Add(model);
+                db.SaveChanges();
+                logger.Info(MessageReponsitory.INSERT_DATA_SUCCESSFUL);
                 return true;
-                
+
             }
             catch (Exception ex)
             {
@@ -309,9 +294,45 @@ namespace QPC.BMS.Repository
             }
         }
 
+        /// <summary>
+        /// Them mot danh sach comment
+        /// </summary>
+        /// <param name="models"></param>
+        /// <returns></returns>
         public bool SetComment(List<Comment> models)
         {
-            throw new NotImplementedException();
+            /// Log enter method
+            logger.EnterMethod();
+
+            /// List cmt loi
+            List<Comment> lstError = new List<Comment>();
+
+            try
+            {
+                foreach (Comment comment in models)
+                {
+                    if (db.Accounts.Where(x => x.ID.Equals(comment.AccountID)).FirstOrDefault() == null)
+                        lstError.Add(comment);
+                    else
+                        db.Comments.Add(comment);
+                }
+
+                db.SaveChanges();
+                logger.Info(MessageReponsitory.INSERT_DATA_SUCCESSFUL);
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                logger.Error($"{MessageReponsitory.INSERT_DATA_UNSUCCESSFUL}");
+                logger.Debug($"{MessageReponsitory.INSERT_DATA_UNSUCCESSFUL} Message: {ex.Message}");
+                throw new Exception($"{MessageReponsitory.INSERT_DATA_UNSUCCESSFUL} Message: {ex.Message}");
+            }
+            finally
+            {
+                //log release method
+                logger.ReleaseMethod();
+            }
         }
     }
 }

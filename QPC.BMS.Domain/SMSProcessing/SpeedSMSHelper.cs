@@ -3,17 +3,18 @@
 /// <author> Nguyen Quy </author>
 /// <copyright> Copyright © 2018. All right reserver. </copyright
 /// </summary>
-using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Web;
-
 namespace AdvertisingOnline.Helpers
 {
-    public class SpeedSMSHelper
+    using Newtonsoft.Json.Linq;
+    using QPC.BMS.Domain;
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+    using System.Net;
+    using System.Web;
+
+    public class SpeedSMSHelper : BaseDomain
     {
         public const int TYPE_QC = 1;
         public const int TYPE_CSKH = 2;
