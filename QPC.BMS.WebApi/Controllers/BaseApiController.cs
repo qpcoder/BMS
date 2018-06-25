@@ -3,7 +3,7 @@
 /// <author> Nguyen Quy </author>
 /// <copyright> Copyright © 2018. All right reserver. </copyright
 /// </summary>
-namespace QPC.BMS.WebApi.Helper
+namespace QPC.BMS.WebApi
 {
     using QPC.BMS.Helpers;
     using QPC.BMS.Helpers.Enum;
