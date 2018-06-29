@@ -17,7 +17,6 @@ namespace QPC.BMS.Repository.EF
         public int ID { set; get; }
 
         public int DownloadID { set; get; }
-        public virtual Download Download { set; get; }
 
         /// <summary>
         /// Cho phep khach vang lai tai tai lieu. 

@@ -20,7 +20,6 @@ namespace QPC.BMS.Repository.EF
         public int AccountID { set; get; }
 
         public int PostTypeID { set; get; }
-        public virtual PostType PostType{ set; get; }
         
         public DateTime? DateCreate { set; get; }
         
@@ -35,7 +34,6 @@ namespace QPC.BMS.Repository.EF
         public string Content { set; get; }
         
         public int FeaturedImageID { set; get; }
-        public virtual Media Media { set; get; }
    
         public Boolean? AllowComment { set; get; }
         
@@ -65,13 +63,8 @@ namespace QPC.BMS.Repository.EF
         /// Tac gia cua bai dang
         /// </summary>
         public int AuthorPostID { set; get; }
-        public virtual AuthorPost AuthorPost{ set; get; }
 
         public Boolean Status { set; get; }
 
-
-        public virtual IEquatable<Comment> Comments{ set; get; }
-
-        public virtual IEquatable<RefPostWithTag> RefPostWithTags{ set; get; }
     }
 }

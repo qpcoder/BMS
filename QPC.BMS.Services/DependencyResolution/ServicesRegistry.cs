@@ -14,6 +14,7 @@ namespace QPC.BMS.Services.DependencyResolution
         {
             #region Constructors and Destructors
             For<IAccountServices>().Use<AccountServicesImp>().Name = TargetImplement.V1.ToString();
+            For<ISystemServices>().Use<SystemServicesImp>().Name = TargetImplement.V1.ToString();
             #endregion
         }
     }

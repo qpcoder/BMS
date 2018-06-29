@@ -22,7 +22,6 @@ namespace QPC.BMS.Repository.EF
         public int AccountID { set; get; }
 
         public int PostID { set; get; }
-        public virtual Post Post { set; get; }
 
         public string Content { set; get; }
 

@@ -20,7 +20,6 @@ namespace QPC.BMS.Repository.EF
         /// Author tao ra tag nay.
         /// </summary>
         public int AccountID { set; get; }
-        public virtual Account Account { set; get; }
 
         public string Name { set; get; }
 
@@ -41,7 +40,5 @@ namespace QPC.BMS.Repository.EF
 
         public string Status { set; get; }
 
-
-        public virtual IEquatable<RefPostWithTag> RefPostWithTags { set; get; }
     }
 }

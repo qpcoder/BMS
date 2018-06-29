@@ -26,7 +26,5 @@ namespace QPC.BMS.Repository.EF
         
         public Boolean Status { set; get; }
 
-
-        public virtual IEquatable<Authorization> Authorizations{ set; get; }
     }
 }

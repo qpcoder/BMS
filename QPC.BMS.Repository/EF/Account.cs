@@ -37,16 +37,13 @@ namespace QPC.BMS.Repository.EF
         public string Address { set; get; }
 
         public int DistrictID { set; get; }
-        public virtual District District { set; get; }
 
         public int? AuthorPostID { set; get; }
-        public virtual AuthorPost AuthorPost { set; get; }
 
         /// <summary>
         /// Meu la sinh vien thi id recode sinh vien vao day, khong thi de null
         /// </summary>
         public int? StudentID { set; get; }
-        public virtual Student Student { set; get; }
 
         [DataType(DataType.EmailAddress, ErrorMessage = "Email is invalid!")]
         public string Email { set; get; }
@@ -104,12 +101,6 @@ namespace QPC.BMS.Repository.EF
         public virtual Role Role { set; get; }
 
         /// <summary>
-        /// Mac dinh bang 0
-        /// Neu la Author dang bai thi cot nay se khac o.
-        /// Luu record phan quyen author cho tai khoa nay.
-        /// </summary>
-
-        /// <summary>
         /// Tong so bai dang cua tai khoan nay
         /// </summary>
         public int TotalPost { set; get; }
@@ -134,16 +125,5 @@ namespace QPC.BMS.Repository.EF
 
         public AccountStatus Status { set; get; }
 
-
-        //cac kien ket nhieu tu ban account
-        public virtual IEquatable<Media> Medias { set; get; }
-
-        public virtual IEquatable<Comment> Comments { get; set; }
-
-        public virtual IEquatable<SocialApi> SocialApis { get; set; }
-
-        public virtual IEquatable<Tag> Tags { set; get; }
-        
-        public virtual IEquatable<Series> Series { set; get; }
     }
 }

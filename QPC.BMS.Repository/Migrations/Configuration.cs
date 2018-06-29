@@ -9,7 +9,6 @@ namespace QPC.BMS.Repository.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
-    using QPC.BMS.Repository.EF;
 
     internal sealed class Configuration : DbMigrationsConfiguration<QPC.BMS.Repository.EF.BMSContext>
     {
@@ -18,13 +17,12 @@ namespace QPC.BMS.Repository.Migrations
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(BMSContext context)
+        protected override void Seed(QPC.BMS.Repository.EF.BMSContext context)
         {
-            base.Seed(context);
-            
-            ///  This method will be called after migrating to the latest version.
-            ///  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            ///  to avoid creating duplicate seed data.
+            //  This method will be called after migrating to the latest version.
+
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
+            //  to avoid creating duplicate seed data.
         }
     }
 }

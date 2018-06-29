@@ -17,7 +17,6 @@ namespace QPC.BMS.Repository.EF
         public int ID { set; get; }
 
         public int CountryID { set; get; }
-        public virtual Country Country { set; get; }
 
         /// <summary>
         /// ma tinh thanh
@@ -34,7 +33,5 @@ namespace QPC.BMS.Repository.EF
 
         public Boolean Status { set; get; }
 
-
-        public virtual IEquatable<District> Districts{ set; get; }
     }
 }

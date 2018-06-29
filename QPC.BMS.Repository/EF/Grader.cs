@@ -24,7 +24,6 @@ namespace QPC.BMS.Repository.EF
         public string Name { set; get; }
 
         public int FacultyID { set; get; }
-        public virtual Faculty Faculty { set; get; }
 
         public string Description { set; get; }
 
@@ -34,7 +33,5 @@ namespace QPC.BMS.Repository.EF
 
         public string Status { set; get; }
 
-
-        public virtual IEquatable<Student> Students{ set; get; }
     }
 }

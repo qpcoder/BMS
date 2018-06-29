@@ -37,8 +37,5 @@ namespace QPC.BMS.Repository.EF
 
         public Boolean Status { set; get; }
 
-
-
-        public virtual IEquatable<Post> Posts { set; get; }
     }
 }

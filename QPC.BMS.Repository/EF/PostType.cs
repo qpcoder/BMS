@@ -27,13 +27,10 @@ namespace QPC.BMS.Repository.EF
         public DateTime? DateUpdate { set; get; }
 
         public int FeatureImageID { set; get; }
-        public virtual Media Media { set; get; }
 
         public int PostCount { set; get; }
 
         public Boolean Status { set; get; }
 
-
-        public virtual IEquatable<Post> Posts{ set; get; }
     }
 }

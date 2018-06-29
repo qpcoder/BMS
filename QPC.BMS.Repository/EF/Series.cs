@@ -17,7 +17,6 @@ namespace QPC.BMS.Repository.EF
         public int ID { set; get; }
 
         public int AccountID { set; get; }
-        public virtual Account Account { set; get; }
 
         public string Name { set; get; }
 
@@ -38,7 +37,5 @@ namespace QPC.BMS.Repository.EF
 
         public Boolean Status { set; get; }
 
-
-        public virtual IEquatable<Post> Posts{ set; get; }
     }
 }

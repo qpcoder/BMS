@@ -29,9 +29,5 @@ namespace QPC.BMS.Repository.EF
 
         public string Status { set; get; }
 
-
-        public virtual IEquatable<Authorization> Authorizations { set; get; }
-
-        public virtual IEquatable<Account> Accounts { set; get; }
     }
 }

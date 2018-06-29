@@ -33,7 +33,6 @@ namespace QPC.BMS.Repository.EF
         /// User dang thao tac tai module nao
         /// </summary>
         public int MiduleID { set; get; }
-        public virtual Module Module { set; get; }
 
         /// <summary>
         /// Thoi gian thuc hien hanh dong

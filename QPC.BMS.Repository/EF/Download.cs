@@ -23,7 +23,6 @@ namespace QPC.BMS.Repository.EF
         public DateTime? DateUpload { set; get; }
 
         public int AccountID { set; get; }
-        public virtual Account Account { set; get; }
 
         /// <summary>
         /// Tong so luot tai cho lien ket hien tai
@@ -34,7 +33,5 @@ namespace QPC.BMS.Repository.EF
 
         public Boolean Status { set; get; }
 
-
-        public virtual IEquatable<DownloadTracking> DownloadTrackings{ set; get; }
      }
 }

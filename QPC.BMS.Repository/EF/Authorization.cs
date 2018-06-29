@@ -17,10 +17,8 @@ namespace QPC.BMS.Repository.EF
         public int ID { set; get; }
         
         public int RoleID { set; get; }
-        public virtual Role Role{ set; get; }
         
         public int ModuleID { set; get; }
-        public virtual Module Module{ set; get; }
         
         public Boolean? AuView { set; get; }
         

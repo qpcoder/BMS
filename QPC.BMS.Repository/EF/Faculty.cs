@@ -22,7 +22,6 @@ namespace QPC.BMS.Repository.EF
         public string Code { set; get; }
 
         public int UniversityID { set; get; }
-        public virtual University University { set; get; }
 
         public string Name { set; get; }
 
@@ -34,7 +33,5 @@ namespace QPC.BMS.Repository.EF
 
         public Boolean Status { set; get; }
 
-
-        public virtual IEquatable<Grader> Graders{ set; get; }
     }
 }

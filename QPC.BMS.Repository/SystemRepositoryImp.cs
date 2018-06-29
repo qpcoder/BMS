@@ -81,12 +81,12 @@ namespace QPC.BMS.Repository
             throw new NotImplementedException();
         }
 
-        public IEnumerable<SystemExceptionLog> SystemExceptionLogLog(Func<SystemExceptionLog, bool> expression)
+        public IEnumerable<SystemExceptionLog> SystemExceptionLog(Func<SystemExceptionLog, bool> expression)
         {
             throw new NotImplementedException();
         }
 
-        public bool SystemExceptionLogLog(SystemExceptionLog models)
+        public bool SystemExceptionLog(SystemExceptionLog models)
         {
             throw new NotImplementedException();
         }

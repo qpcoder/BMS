@@ -17,10 +17,8 @@ namespace QPC.BMS.Repository.EF
         public int ID { set; get; }
 
         public int SocialTypeID { set; get; }
-        public virtual SocialType SocialType { set; get; }
 
         public int AccountID { set; get; }
-        public virtual Account Account { set; get; }
 
         /// <summary>
         /// Ten goi Api cho mang do dang dung

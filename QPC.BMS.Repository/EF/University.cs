@@ -21,7 +21,6 @@ namespace QPC.BMS.Repository.EF
         public string Address { set; get; }
 
         public int DistrictID { set; get; }
-        public virtual District District { set; get; }
 
         public string Fax { set; get; }
 
@@ -38,7 +37,5 @@ namespace QPC.BMS.Repository.EF
 
         public Boolean Status { set; get; }
 
-
-        public virtual IEquatable<Faculty> Faculties { set; get; }
     }
 }

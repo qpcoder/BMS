@@ -83,7 +83,7 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="expression">lamdar expression</param>
         /// <returns>list logs</returns>
-        IEnumerable<SystemExceptionLog> SystemExceptionLogLog(Func<SystemExceptionLog, bool> expression);
+        IEnumerable<SystemExceptionLog> SystemExceptionLog(Func<SystemExceptionLog, bool> expression);
 
         /// <summary>
         /// Get SystemExceptionLog by id
@@ -97,7 +97,7 @@ namespace QPC.BMS.Repository
         /// </summary>
         /// <param name="models">object SystemExceptionLog</param>
         /// <returns>true or false</returns>
-        Boolean SystemExceptionLogLog(SystemExceptionLog models);
+        Boolean SystemExceptionLog(SystemExceptionLog models);
 
         /// <summary>
         /// Update SystemExceptionLog by lamdar expression

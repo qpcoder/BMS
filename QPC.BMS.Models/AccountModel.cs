@@ -10,30 +10,42 @@ namespace QPC.BMS.Models
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Runtime.Serialization;
 
+    [DataContract]
     public class AccountModel
     {
         [Key]
         [Required]
+        [DataMember]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
 
+        [DataMember]
         public string UserName { set; get; }
 
+        [DataMember]
         public string Password { set; get; }
 
+        [DataMember]
         public string FirstName { set; get; }
 
+        [DataMember]
         public string LastName { set; get; }
 
+        [DataMember]
         public string DisplayName { set; get; }
 
+        [DataMember]
         public string Permalink { set; get; }
 
+        [DataMember]
         public Gender? Gender { set; get; }
 
+        [DataMember]
         public DateTime BirthDay { set; get; }
 
+        [DataMember]
         public string Address { set; get; }
 
         public int DistrictID { set; get; }

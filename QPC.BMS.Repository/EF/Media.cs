@@ -17,10 +17,8 @@ namespace QPC.BMS.Repository.EF
         public string ID { set; get; }
 
         public int MediaTypeID { set; get; }
-        public MediaType MediaType { set; get; }
 
         public int AccountID { set; get; }
-        public virtual Account Account { set; get; }
 
         public string FileName { set; get; }
 

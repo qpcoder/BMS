@@ -36,7 +36,5 @@ namespace QPC.BMS.Repository.EF
 
         public Boolean Status { set; get; }
 
-
-        public IEquatable<Province> Provinces{ set; get; }
     }
 }

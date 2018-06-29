@@ -14,7 +14,7 @@ namespace QPC.BMS.Services
     using System.Text;
     using System.Threading.Tasks;
 
-    public class AccountServicesImp : IAccountServices
+    public class AccountServicesImp : BaseServices, IAccountServices
     {
         /// <summary>
         /// Handle instance for Log4Net

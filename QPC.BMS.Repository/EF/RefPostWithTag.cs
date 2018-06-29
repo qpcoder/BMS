@@ -17,10 +17,8 @@ namespace QPC.BMS.Repository.EF
         public int ID { set; get; }
 
         public int TagID { set; get; }
-        public Tag Tag { set; get; }
 
         public int PostID { set; get; }
-        public virtual Post Post { set; get; }
 
         public DateTime? DateCreate { set; get; }
 

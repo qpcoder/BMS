@@ -17,7 +17,6 @@ namespace QPC.BMS.Repository.EF
         /// Neu nguoi do hong phai la sinh vien
         /// </summary>
         public int GraderID { set; get; }
-        public virtual Grader Grader { set; get; }
        
         public string MSSV { set; get; }
 

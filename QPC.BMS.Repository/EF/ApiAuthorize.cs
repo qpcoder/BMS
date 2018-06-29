@@ -18,7 +18,6 @@ namespace QPC.BMS.Repository.EF
         public int ID { set; get; }
 
         public int AccountID { set; get; }
-        public virtual Account Account { set; get; }
 
         public DateTime? DateCreate { set; get; }
 

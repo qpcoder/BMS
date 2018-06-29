@@ -26,7 +26,6 @@ namespace QPC.BMS.Repository.EF
         public string Description { set; get; }
 
         public int ProvinceID { set; get; }
-        public virtual Province Province { set; get; }
 
         public DateTime? DateCreate { set; get; }
 
@@ -34,7 +33,5 @@ namespace QPC.BMS.Repository.EF
 
         public Boolean Status { set; get; }
 
-
-        public virtual IEquatable<University> Universities{ set; get; }
     }
 }
