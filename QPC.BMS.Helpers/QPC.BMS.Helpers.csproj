@@ -101,6 +101,7 @@
     <Compile Include="Enum\TargetImplement.cs" />
     <Compile Include="Enum\TitleContants.cs" />
     <Compile Include="FileDownloadHelpers.cs" />
+    <Compile Include="HelpperTier.cs" />
     <Compile Include="ILoggingHelper.cs" />
     <Compile Include="LoggingHelperImp.cs" />
     <Compile Include="NetworkHelper.cs" />

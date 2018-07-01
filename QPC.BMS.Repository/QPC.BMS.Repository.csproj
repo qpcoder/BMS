@@ -107,6 +107,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PostRepositoryImp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryTier.cs" />
     <Compile Include="SystemRepositoryImp.cs" />
   </ItemGroup>
   <ItemGroup>
