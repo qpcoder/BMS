@@ -63,8 +63,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutoMapper\AccountMapping.cs" />
+    <Compile Include="AutoMapper\AccountMapperImpV1.cs" />
+    <Compile Include="AutoMapper\IBaseMapper.cs" />
+    <Compile Include="AutoMapper\SystemExceptionLogMapperImpV1.cs" />
     <Compile Include="BaseDomain.cs" />
+    <Compile Include="DependencyResolution\IoC.cs" />
+    <Compile Include="DependencyResolution\DomainRegistry.cs" />
+    <Compile Include="DomainTier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SMSProcessing\EsmsProcessing.cs" />
     <Compile Include="SMSProcessing\SMSTypeEnum.cs" />
@@ -89,9 +94,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="EmailProcessing\" />
-    <Folder Include="FacebookAPIProcessing\" />
-    <Folder Include="GoogleAPIProcessing\" />
+    <Folder Include="EmailApiProcessing\" />
+    <Folder Include="FacebookApiProcessing\" />
+    <Folder Include="GoogleApiProcessing\" />
+    <Folder Include="ZaloApiProcessing\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

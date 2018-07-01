@@ -12,6 +12,7 @@ namespace QPC.BMS.Domain
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using global::AutoMapper;
 
     public class BaseDomain
     {
@@ -19,6 +20,11 @@ namespace QPC.BMS.Domain
         /// Handle instance for log4net
         /// </summary>
         internal readonly ILoggingHelper logger;
+
+        /// <summary>
+        /// Biến khai báo đối tượng automapper
+        /// </summary>
+        internal IMapper mapper;
 
         /// <summary>
         /// Dependency Injection 

@@ -8,8 +8,9 @@ namespace QPC.BMS.Repository
     using System;
     using System.Collections.Generic;
     using QPC.BMS.Repository.EF;
+    using QPC.BMS.Repository.Enum;
 
-    class SystemRepositoryImp : ISystemRepository
+    class SystemRepositoryImp : BaseRepository, ISystemRepository
     {
         public bool DeleteSetting(int settingID)
         {
@@ -81,12 +82,39 @@ namespace QPC.BMS.Repository
             throw new NotImplementedException();
         }
 
-        public IEnumerable<SystemExceptionLog> SystemExceptionLog(Func<SystemExceptionLog, bool> expression)
+        /// <summary>
+        /// Ghi nhân các lỗi phát sinh khi ứng dụng hoạt động
+        /// </summary>
+        /// <param name="models"> OBJ ghi nhân sự cố </param>
+        /// <returns></returns>
+        public bool SetSystemExceptionLog(SystemExceptionLog models)
         {
-            throw new NotImplementedException();
+            /// Log enter method
+            /// 
+            logger.EnterMethod();
+
+            try
+            {
+                db.SystemExceptionLogs.Add(models);
+                db.SaveChanges();
+                logger.Info(MessageReponsitory.INSERT_DATA_SUCCESSFUL);
+                return true;
+            }
+            catch (Exception e)
+            {
+                logger.Warn(MessageReponsitory.INSERT_DATA_UNSUCCESSFUL);
+                logger.Debug(MessageReponsitory.INSERT_DATA_UNSUCCESSFUL + e.Message);
+                throw new Exception(MessageReponsitory.INSERT_DATA_UNSUCCESSFUL + e.Message);
+            }
+            finally
+            {
+                /// Log release method
+                /// 
+                logger.ReleaseMethod();
+            }
         }
 
-        public bool SystemExceptionLog(SystemExceptionLog models)
+        public IEnumerable<SystemExceptionLog> SystemExceptionLog(Func<SystemExceptionLog, bool> expression)
         {
             throw new NotImplementedException();
         }

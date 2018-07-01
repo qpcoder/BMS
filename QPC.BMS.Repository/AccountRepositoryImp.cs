@@ -1,42 +1,29 @@
-﻿/// <summary>
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using QPC.BMS.Helpers;
+using QPC.BMS.Helpers.Enum;
+using QPC.BMS.Repository.EF;
+using QPC.BMS.Repository.Enum;
+/// <summary>
 /// <company> Nguyen Quy Blogger </company>
 /// <author> Nguyen Quy </author>
 /// <copyright> Copyright © 2018. All right reserver. </copyright
 /// </summary>
+/// 
 namespace QPC.BMS.Repository
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using QPC.BMS.Helpers;
-    using QPC.BMS.Helpers.Enum;
-    using QPC.BMS.Repository.EF;
-    using QPC.BMS.Repository.Enum;
-
     /// <summary>
     /// Implementation interface IAccountRepository
     /// </summary>
-    public class AccountRepositoryImp : IAccountRepository
+    public class AccountRepositoryImp : BaseRepository, IAccountRepository
     {
         /// <summary>
-        /// Handle instance for log4net
-        /// </summary>
-        private readonly ILoggingHelper logger;
-
-        /// <summary>
-        /// Handle instance connection to database
-        /// </summary>
-        private BMSContext db;
-
-        /// <summary>
-        /// Dependency Injection 
+        /// Hàm khởi tạo dùng cho class này
         /// </summary>
         public AccountRepositoryImp()
         {
-            logger = Helpers.DependencyResolution.IoC
-              .Container().GetInstance<ILoggingHelper>(TargetImplement.V1.ToString());
-            db = new BMSContext();
         }
 
         /// <summary>

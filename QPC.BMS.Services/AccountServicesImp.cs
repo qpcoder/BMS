@@ -17,16 +17,13 @@ namespace QPC.BMS.Services
     public class AccountServicesImp : BaseServices, IAccountServices
     {
         /// <summary>
-        /// Handle instance for Log4Net
+        /// Hàm khởi tạo các đối tượng cần sử dụng cho toàn class
         /// </summary>
-        //ILoggingHelper logger = Helpers.DependencyResolution.IoC.Container()
-        //    .GetInstance<ILoggingHelper>(TargetImplement.V1.ToString());
-
-        /// <summary>
-        /// Handle instance for account repository
-        /// </summary>
-        //IAccountRepository accountRepository = Repository.DependencyResolution.IoC.Container()
-        //    .GetInstance<IAccountRepository>(TargetImplement.V1.ToString());
+        public AccountServicesImp()
+        {
+            accountRepository = Repository.DependencyResolution.IoC.Container()
+           .GetInstance<IAccountRepository>(TargetImplement.V1.ToString());
+        }
 
         public bool Login(string userName, string passWord)
         {

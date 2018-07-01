@@ -75,7 +75,11 @@ namespace QPC.BMS.WepApp
 
 #if DEBUG
             /// Khi dang debug thi viet log vao database
-            WriteSystemExceptionLog(exception);
+            systemServices.SetSystemExceptionLog(exception, Request.Url.AbsoluteUri, Session["accountID"].ToString());
+
+            /// Update:
+            /// Dung api thay cho goi ve services de luu lai cac exeption
+            /// Dung ham: networkHelper.SendGetRequest() de lay ve goi respons
 #endif
 
             /// Log the exeption
@@ -140,31 +144,6 @@ namespace QPC.BMS.WepApp
         {
             Session["accountID"] = String.Empty;
             Response.Redirect("~/Admin/Home/Login");
-        }
-
-        /// <summary>
-        /// Ham ghi nhan loi duoc phat sinh ra tu ung dung vao trong database
-        /// </summary>
-        /// <param name="exception"></param>
-        public void WriteSystemExceptionLog(Exception exception)
-        {
-            SystemExceptionLogModel logModel = new SystemExceptionLogModel()
-            {
-                DateCreated = DateTime.Now,
-                Message = exception.Message,
-                Source = exception.Source,
-                StackTrace = exception.StackTrace,
-                TargetSite = exception.TargetSite.Name,
-                Url = Request.Url.AbsoluteUri,
-                Username = Session["accountID"].ToString()
-            };
-
-            ///luu du lieu vao database
-            systemServices.SetSystemExceptionLog(logModel);
-
-            /// Update:
-            /// Dung api thay cho goi ve services de luu lai cac exeption
-            /// Dung ham: networkHelper.SendGetRequest() de lay ve goi respons
         }
     }
 }

@@ -63,6 +63,7 @@
     <Compile Include="IAccountServices.cs" />
     <Compile Include="ISystemServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicesTier.cs" />
     <Compile Include="SystemServicesImp.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using QPC.BMS.WepApp;
 using QPC.BMS.WepApp.Controllers;
 
-namespace QPC.BMS.UnitTests.Controllers
+namespace QPC.BMS.UnitTests.ControllerTest
 {
     [TestClass]
     public class HomeControllerTest
